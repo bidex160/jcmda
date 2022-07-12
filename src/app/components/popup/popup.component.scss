@@ -1,0 +1,33 @@
+.content{
+    padding: 0 30px 30px 30px;
+  
+  }
+  .modal-title {
+       font-size: 24px;
+       font-weight: 700;
+      flex: auto !important;
+  
+  }
+  .footerbtn{
+      display: flex;
+      float: right;
+      margin-top: 20px 0 20px 0;
+  }
+  .modal-footer {
+    text-align: right;
+    display: flex;
+    border-top: 1px solid #e5e5e5;
+}
+button{
+    height: 55px !important;
+    padding: 0 20px 0 20px;
+    border-radius: 20px;
+}
+input{
+    height: 55px !important; 
+}
+.btn-primary{
+    background-color: green;
+    color: #fff;
+    margin-left: 25px;
+}

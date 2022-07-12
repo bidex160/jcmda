@@ -1,0 +1,561 @@
+
+
+<section class="webtop" >
+
+  <div class="secregister">
+    <div class="content" >
+
+      <div style="margin-top: 60px;flex: 1; ">
+          <h4 class="htitle">BOOK WITH <br>
+            NO STRESS</h4>
+
+          
+         <p class="ptitle" style="width: 100% !important">
+          In order to make your conference experience stress free and <br>
+           enjoyable, our team have put together the best hotel offers at the <br>
+           cheapest rates you can afford with close proximities to the venue. 
+         </p>
+         <div class="img__below">
+          <div class="conImg" >
+            <img src="assets/img/Coder.png"  style="height: 80%;">
+          </div>
+         </div>
+
+    
+
+     
+      </div>
+
+
+</div>
+
+
+<div class="conImg" style="display: flex;justify-content: end;     align-items: start; margin-top: 60px;">
+<img src="assets/img/ImageTab.png" width="90%" >
+</div>
+  </div>
+
+<div class="content" style="width:80%">
+  <p class="ptitle" style="width: 100% !important">
+    You must be registered for the 5TH Joint National Conference to obtain a hotel reservation.<br>
+    There are arrangements for free transportation to and from the conference venue.
+    
+   </p>
+</div>
+
+
+
+  </section>
+
+  <section class="mobiletop" >
+
+    <div class="secregister">
+      <div class="conImg" style="display: flex;justify-content: end;     align-items: start; margin-top: 60px;">
+        <img src="assets/img/ImageTab.png" width="90%" >
+        </div>
+  <div class="content" >
+  
+        <div style="margin-top: 60px;flex: 1; ">
+            <h4 class="htitle">BOOK WITH NO STRESS</h4>
+  
+            
+      <p class="ptitle" style="width: 100% !important">
+            In order to make your conference experience stress  <br>free and 
+             enjoyable, our team have put together the <br>best 
+              hotel offers at the cheapest rates you can  <br>afford with close proximities to the venue. 
+           </p>
+           <div class="img__below">
+        <div style=" margin-top: 20px;
+            display: flex;
+    justify-content: center;
+        margin-bottom: 20px;">
+  <img src="assets/img/Coder.png" class="imgcon">
+        </div>
+            
+          
+           </div>
+         
+  
+       
+        </div>
+  
+  
+  </div>
+   
+  
+
+    </div>
+  
+  <div class="content mcontent" >
+    <p class="ptitle" style="width: 100% !important">
+      You must be registered for the 5TH Joint National Conference to obtain a hotel reservation.<br>
+      There are arrangements for free transportation to and from the conference venue.
+      
+     </p>
+  </div>
+  
+  
+  
+    </section>
+
+    
+  <section *ngIf="!showForm" class="secHotel">
+    <div class="webbelow" style="display: flex;justify-content: center;
+    margin-bottom: 30px;">
+      <div class="circleStep"  [ngClass]="{'step__active': hotelIndex == 1}" >
+
+      </div>
+      <div class="circleStep"  [ngClass]="{'step__active': hotelIndex == 2}" >
+
+      </div>
+    </div>
+    <div class="hotels webbelow" >
+     
+      
+     
+        <div *ngIf="hotelIndex == 1 " class="hotel__card" style="margin-right: 40px;">
+          <img src="assets/img/saint.png" style="width: 100%; ">
+          <div class="hotelContent" >
+            <p class="hotitle">All Saint Guest House
+            </p>
+            <p class="name">No 26 , Tamale street, Zone 3, Wuse.</p>
+            <p class="price">8,925  <span>/ night</span></p>
+            <p class="distant"> 12mins 6.3km</p>
+            <div style="display: flex;  justify-content: space-around;">
+              <div></div>
+              <button
+               (click)="bookNow('All Saint Guest House',8925)">BOOK NOW</button>
+              <div style="display:flex; flex-direction:column; align-items:flex-end">
+                <div class="counter">
+                  <p class="ctext" *ngIf="bookingStat">{{70 - this.bookingStat?.saint}}</p>
+                </div>
+                 
+                  <p class="txt">
+                    ROOMS/<br> AVAILABLE
+                  </p>
+                  
+              </div>
+            </div>
+          </div>
+        </div>
+  
+  <div *ngIf="hotelIndex == 1" class="hotel__card" style="margin-right: 40px;">
+    <img src="assets/img/candle.png" style="    width: 100%;">
+    <div class="hotelContent" >
+    <p class="hotitle">Candel  Lux Hotel 
+    </p>
+    <p class="name">No 5 Sir Anebo Okekenta street Area 1</p>
+    <p class="price">36,750 <span>/ night</span></p>
+    <p class="distant"> 10mins 4.8km</p>
+
+
+    <div style="display: flex;  justify-content: space-around;">
+      <div></div>
+      <button
+      (click)="bookNow('Candel Lux Hotel',36750)">BOOK NOW</button>
+      <div style="display:flex; flex-direction:column; align-items:flex-end">
+        <div class="counter">
+          <p class="ctext" *ngIf="bookingStat">{{60 - this.bookingStat?.candel}}</p>
+
+        </div>
+         
+          <p class="txt">
+            ROOMS/<br> AVAILABLE
+          </p>
+      </div>
+    </div>
+  </div>
+  </div>
+  
+  <div *ngIf="hotelIndex == 1" class="hotel__card">
+    <img src="assets/img/roses.png" style="    width: 100%;">
+    <div class="hotelContent" >
+    <p class="hotitle">Roses Hotel
+    </p>
+    <p class="name">Durumi District Area 5</p>
+    <p class="price">12,600 <span>/ night</span></p>
+    <p class="distant"> 13mins 5.5km</p>
+   
+
+    <div style="display: flex;  justify-content: space-around;">
+      <div></div>
+      <button
+      (click)="bookNow('Roses Hotel',12600)">
+      BOOK NOW</button>
+      <div style="display:flex; flex-direction:column; align-items:flex-end">
+        <div class="counter">
+          <p class="ctext" *ngIf="bookingStat">{{60 - this.bookingStat?.roses}}</p>
+        </div>
+         
+          <p class="txt">
+            ROOMS/<br> AVAILABLE
+          </p>
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+
+
+
+  <div  *ngIf="hotelIndex == 2" class="hotel__card" style="margin-right: 40px;">
+    <img src="assets/img/saint.png" style="    width: 100%;">
+    <div class="hotelContent" >
+      <p class="hotitle">Sharon Hotel
+      </p>
+      <p class="name">Jos street Garki.</p>
+      <p class="price">12,600 <span>/ night</span></p>
+      <p class="distant"> 10mins 5.4km</p>
+
+      <div style="display: flex;  justify-content: space-around;">
+        <div></div>
+        <button
+        (click)="bookNow('Sharon Hotel',12600)">BOOK NOW</button>
+        <div style="display:flex; flex-direction:column; align-items:flex-end">
+          <div class="counter">
+            <p class="ctext"  *ngIf="bookingStat">{{50 - this.bookingStat?.sharon}}</p>
+          </div>
+           
+            <p class="txt">
+              ROOMS/<br> AVAILABLE
+            </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="hotelIndex == 2 " class="hotel__card" style="margin-right: 40px;">
+    <img src="assets/img/rank.png" style="    width: 100%;">
+    <div class="hotelContent" >
+      <p class="hotitle">Top Rank Hotel
+      </p>
+      <p class="name">Wuse Zone 4</p>
+      <p class="price">17,850 <span>/ night</span></p>
+      <p class="distant"> 11mins 7.0km</p>
+   
+      <div style="display: flex;  justify-content: space-around;">
+        <div></div>
+        <button
+        (click)="bookNow('Top Rank Hotel',17500)">BOOK NOW</button>
+        <div style="display:flex; flex-direction:column; align-items:flex-end">
+          <div class="counter">
+            <p class="ctext"  *ngIf="bookingStat">{{100 - this.bookingStat?.top}}</p>
+          </div>
+           
+            <p class="txt">
+              ROOMS/<br> AVAILABLE
+            </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="hotelIndex == 2" class="hotel__card">
+    <img src="assets/img/saint.png" style="    width: 100%;">
+    <div class="hotelContent" >
+      <p class="hotitle">All Saint Guest House
+      </p>
+      <p class="name">No 26 , Tamale street, Zone 3, Wuse.</p>
+      <p class="price">8,925 <span>/ night</span></p>
+      <p class="distant"> 12mins 6.3km</p>
+    
+
+      <div style="display: flex;  justify-content: space-around;">
+        <div></div>
+        <button
+        (click)="bookNow('All Saint Guest House',8925)">
+        BOOK NOW</button>
+        <div style="display:flex; flex-direction:column; align-items:flex-end">
+          <div class="counter">
+            <p class="ctext"  *ngIf="bookingStat">{{70 - this.bookingStat?.saint}}</p>
+          </div>
+           
+            <p class="txt">
+              ROOMS/<br> AVAILABLE
+            </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    </div>
+    <div class="hotels mobilebelow" >
+
+     
+      <div  class="hotel__card">
+        <img src="assets/img/saint.png" style="    width: 100%; ">
+        <div class="hotelContent" >
+          <p class="hotitle">All Saint Guest House
+          </p>
+          <p class="name">No 26 , Tamale street, Zone 3, Wuse.</p>
+          <p class="price">8,925 <span>/ night</span></p>
+          <p class="distant"> 12mins 6.3km</p>
+     
+          <div style="display: flex;  justify-content: space-around;">
+            <div></div>
+            <button
+            (click)="bookNow('All Saint Guest House',8925)">
+            BOOK NOW</button>
+            <div style="display:flex; flex-direction:column; align-items:flex-end">
+              <div class="counter">
+                <p class="ctext"  *ngIf="bookingStat">{{70 - this.bookingStat?.saint}}</p>
+              </div>
+               
+                <p class="txt">
+                  ROOMS/<br> AVAILABLE
+                </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+<div  class="hotel__card">
+  <img src="assets/img/candle.png" style="    width: 100%;">
+  <div class="hotelContent" >
+  <p class="hotitle">Candel  Lux Hotel 
+  </p>
+  <p class="name">No 5 Sir Anebo Okekenta street Area 1</p>
+  <p class="price">36,750 <span>/ night</span></p>
+  <p class="distant"> 10mins 4.8km</p>
+
+  <div style="display: flex;  justify-content: space-around;">
+    <div></div>
+    <button
+    (click)="bookNow('Candel Lux Hotel',36750)">BOOK NOW</button>
+    <div style="display:flex; flex-direction:column; align-items:flex-end">
+      <div class="counter">
+        <p class="ctext" *ngIf="bookingStat">{{60 - this.bookingStat?.candel}}</p>
+
+      </div>
+       
+        <p class="txt">
+          ROOMS/<br> AVAILABLE
+        </p>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="hotel__card">
+  <img src="assets/img/roses.png" style="    width: 100%;">
+  <div class="hotelContent" >
+  <p class="hotitle">Roses Hotel
+  </p>
+  <p class="name">Durumi District Area 5</p>
+  <p class="price">12,600 <span>/ night</span></p>
+  <p class="distant"> 13mins 5.5km</p>
+  <div style="display: flex;  justify-content: space-around;">
+    <div></div>
+    <button
+    (click)="bookNow('Roses Hotel',12600)">
+    BOOK NOW</button>
+    <div style="display:flex; flex-direction:column; align-items:flex-end">
+      <div class="counter">
+        <p class="ctext" *ngIf="bookingStat">{{60 - this.bookingStat?.roses}}</p>
+      </div>
+       
+        <p class="txt">
+          ROOMS/<br> AVAILABLE
+        </p>
+    </div>
+  </div>
+</div>
+</div>
+
+<div   class="hotel__card">
+  <img src="assets/img/sharon.png" style="    width: 100%;">
+  <div class="hotelContent" >
+    <p class="hotitle">Sharon Hotel
+    </p>
+    <p class="name">Jos street Garki.</p>
+    <p class="price">12,600 <span>/ night</span></p>
+    <p class="distant"> 10mins 5.4km</p>
+    <div style="display: flex;  justify-content: space-around;">
+      <div></div>
+      <button
+      (click)="bookNow('Sharon Hotel',12600)">BOOK NOW</button>
+      <div style="display:flex; flex-direction:column; align-items:flex-end">
+        <div class="counter">
+          <p class="ctext"  *ngIf="bookingStat">{{50 - this.bookingStat?.sharon}}</p>
+        </div>
+         
+          <p class="txt">
+            ROOMS/<br> AVAILABLE
+          </p>
+      </div>
+    </div>
+  </div>
+</div>
+<div   class="hotel__card">
+  <img src="assets/img/rank.png" style="    width: 100%;">
+  <div class="hotelContent" >
+    <p class="hotitle">Top Rank Hotel
+    </p>
+    <p class="name">Jos street Garki.</p>
+    <p class="price">17,850 <span>/ night</span></p>
+    <p class="distant"> 10mins 5.4km</p>
+    <div style="display: flex;  justify-content: space-around;">
+      <div></div>
+      <button
+      (click)="bookNow('Top Rank Hotel',17850)">BOOK NOW</button>
+      <div style="display:flex; flex-direction:column; align-items:flex-end">
+        <div class="counter">
+          <p class="ctext"  *ngIf="bookingStat">{{100 - this.bookingStat?.top}}</p>
+        </div>
+         
+          <p class="txt">
+            ROOMS/<br> AVAILABLE
+          </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+  </div>
+    <div class="bottom__navs">
+    
+     
+     <div style="margin-top: 26px; display: flex;">
+      <div  (click)="prevHotel()">
+        <img src="assets/img/Prev.png">
+      </div>
+ <div (click)="nextHotel()">
+  <img src="assets/img/Next.png">
+ </div>
+    
+     </div>
+     
+ </div>
+  </section>
+
+
+  <section id="regform" *ngIf="showForm"  name="secregisterform" class="secregisterform">
+    <div   class="container"  style="padding-top: 60px; padding-bottom: 60px;">
+    
+     <form id="main" style="background: #fff; border-radius: 20px;" name="form" [formGroup]="form" (ngSubmit)="form.valid"  >
+         <h4  class="text-center title">HOTEL RESERVATION FORM</h4>
+         <p  class="text-center p" style="margin-bottom: 40px;"> 5th Joint National Conference</p>
+         <div style="float: right;   display: flex;  ">
+              <div class="circleStep"  [ngClass]="{'step__active': pageIndex == 1}" >
+ 
+              </div>
+              <div class="circleStep" [ngClass]="{'step__active': pageIndex == 2}">
+ 
+             </div>
+             <div class="circleStep" [ngClass]="{'step__active': pageIndex == 3}">
+ 
+             </div>
+           
+             
+         </div>
+      
+         <div class="step1" >
+       
+                 <div class="step__content">
+                   <div class="form-group">
+                       <input placeholder="First & Last Name" type="text" class="form-control" formControlName="name" [ngClass]="{'is-invalid':form.get('name').touched && form.get('name').invalid}"   />
+                       <div *ngIf="form.get('name').touched && form.get('name').invalid"  class="invalid-feedback">
+                         <div *ngIf="form.get('name').errors.required">First & Last Name  is required</div>
+                      
+                       </div>
+                     </div>
+       
+                   <div class="form-group">
+                       <input placeholder="Email Address" type="text" class="form-control" formControlName="email" [ngClass]="{'is-invalid':form.get('email').touched && form.get('email').invalid}"   />
+                       <div *ngIf="form.get('email').touched && form.get('email').invalid"  class="invalid-feedback">
+                         <div *ngIf="form.get('email').errors.required">Email is required</div>
+                         <div *ngIf="form.get('email').errors.email">Email must be a valid email Address</div>
+                       </div>
+                     </div>
+                     <div class="form-group">
+                      <input placeholder="Hotel name" type="text" class="form-control" formControlName="hotelname"   />
+                    </div>
+
+                    <div class="form-group">
+                      <input  min="1" placeholder="Number of days" type="number" class="form-control" formControlName="days"  />
+                      <div *ngIf="form.get('days').touched && form.get('days').invalid"  class="invalid-feedback">
+                        <div *ngIf="form.get('days').errors.required">Number of days is required</div>
+                     
+                      </div>
+                    </div>
+                 </div>
+       <div class="step__content__ss">
+        <div class="form-group">
+          <!-- <input placeholder="Checkin" type="text" class="form-control" formControlName="checkin" [ngClass]="{'is-invalid':form.get('checkin').touched && form.get('checkin').invalid}"   />
+          <div *ngIf="form.get('checkin').touched && form.get('checkin').invalid"  class="invalid-feedback">
+            <div *ngIf="form.get('checkin').errors.required">Checkin is required</div>
+          </div> -->
+          <mat-form-field style=" width: 100%;">
+            <mat-label style=" margin-top: 25px !important;
+            margin-left: 20px !important;">Checkin</mat-label>
+            <input matInput [matDatepicker]="picker" formControlName="checkin">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+        </div>
+       
+           <div class="form-group">
+               <input placeholder="+2347000000000" type="text" class="form-control" formControlName="phone" [ngClass]="{'is-invalid':form.get('phone').touched && form.get('phone').invalid}"   />
+               <div *ngIf="form.get('phone').touched && form.get('phone').invalid"  class="invalid-feedback">
+                 <div *ngIf="form.get('phone').errors.required">Phone number is required</div>
+               </div>
+             </div>
+             <div class="form-group">
+        
+             <select
+                 [ngClass]="{'is-invalid':form.get('category').touched && form.get('category').invalid}" formControlName="category">
+                    <option value="Students" selected disabled>Select Category</option>
+              
+                            <option value="Students">Students</option>
+                            <option value="House officers & Corp Members">House officers & Corp Members</option>
+                            <option value="Doctors">Doctors</option>
+                            <option value="Doctor with Spouse">Doctor with Spouse</option>
+                            <option value="Non Doctors">Non Doctors</option>
+                            <option value="International Delegates">International Delegates</option>
+                            
+                                 </select>
+                              <div *ngIf="form.get('category').touched && form.get('category').invalid"  class="invalid-feedback">
+                                <div *ngIf="form.get('category').errors.required">Category is required</div>
+                             
+                              </div>
+                            </div>
+             <div class="form-group">
+               <input placeholder="Enter Registration Code" type="text" class="form-control" formControlName="code" [ngClass]="{'is-invalid':form.get('code').touched && form.get('code').invalid}"   />
+               <div *ngIf="form.get('code').touched && form.get('code').invalid"  class="invalid-feedback">
+                 <div *ngIf="form.get('code').errors.required"> Registration Code is required</div>
+               </div>
+               <div *ngIf="invalidReg"  class="invalid-feedback">
+                <div> Registration Code is invalid</div>
+              </div>
+             </div>
+             <div class="form-group" style="float: right; display: flex;">
+              <button class="btngroup" style="margin-right: 10px" (click)="closeForm()">BACK</button>
+              <!-- <button
+               class="next btngroup"
+               (click)="onBook()" 
+               [disabled]="!form.valid">BOOK</button> -->
+               <button  
+               #buttonpay
+               angular4-paystack
+               [key]="'pk_live_ae6bb7ed03893baa0e8801dad009f2afd5eed0ab'"
+               [email]="form.get('email').value"
+               [amount]="(form.get('amount').value * 100 * this.form.get('days').value)"
+               [ref]="reference"
+               (paymentInit)="paymentInit()"
+               (onClose)="paymentCancel()"
+               (callback)="paymentDone($event)"
+               class="next btngroup"
+               [disabled]="!form.valid">BOOK</button>
+
+             </div>
+       
+       </div>
+       
+                   </div>
+                      
+       
+               </form>
+    </div>
+     </section>

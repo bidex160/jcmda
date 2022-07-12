@@ -1,0 +1,61 @@
+.inner{
+    border-radius: 20px;
+    padding: 54px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 2px solid #025E94;
+}
+.terms{
+    border-radius: 20px;
+    padding: 25px;
+    display: grid;
+}
+.modal-body{
+    padding: 44px;
+    border-radius: 20px;
+}
+@media(max-width:767px){
+    .modal-body{
+        padding: 0;
+    } 
+}
+.term_body{
+    padding: 0 !important;
+}
+.title{
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 30px;
+line-height: 44px;
+margin-bottom: 10px;
+}
+
+.title2{
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 30px;
+line-height: 44px;
+margin-top: 15px;
+}
+.p{
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 300;
+font-size: 20px;
+line-height: 27px;
+text-align: center;
+
+color: #000000;
+}
+@media(max-width:767px){
+    .p{
+        font-size: 13px;
+    }
+    .title{
+        font-size: 13px;
+    }
+}

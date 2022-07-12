@@ -1,0 +1,36 @@
+
+  <form name="form" [formGroup]="form" >
+    <div class="modal-header">
+      <h5 class="modal-title display-4 text-center">Support</h5>
+    </div>
+    <div class="modal-body" class="content">
+  
+        <div class="form-group">
+          <label for="password">Amount</label>
+          <input type="number" class="form-control"  formControlName="amount" />
+         
+        </div>
+    
+    </div>
+    <div class="modal-footer">
+      <div class="left-side">
+          <button class="btn btn-danger" (click)="onCloseModal()">Cancel</button>
+      </div>
+      <div class="divider"></div>
+      <div class="right-side">
+          <button 
+          angular4-paystack
+           key="pk_live_ae6bb7ed03893baa0e8801dad009f2afd5eed0ab"
+          [email]="'conference@cmdanigeria.org'"
+          [amount]="(form.get('amount').value*100)"
+          [ref]="reference"
+          class="btn-primary"
+          (paymentInit)="paymentInit()"
+          (onClose)="paymentCancel()"
+          (callback)="paymentDone($event)"
+           [disabled]="!form.valid"
+            >Continue</button>
+      </div>
+    </div>
+    
+    </form>

@@ -1,0 +1,378 @@
+
+.step1{
+    display: flex;
+    margin-top: 60px;
+}
+
+@media(max-width:767px){
+    button{
+        width: 100% !important;
+    }
+}
+button:disabled{
+
+
+background: rgba(rgb(145, 158, 145), 0.8);
+color: rgb(224, 214, 214);
+}
+
+
+.title{
+    color: #000;
+font-style: normal;
+font-weight: 400;
+font-size: 35px;
+
+
+}
+.p{
+    font-style: normal;
+font-weight: 300;
+font-size: 30px;
+line-height: 37px;
+color: #000;
+}
+.box{
+    border: solid 5px #000;
+    border-color: #000 transparent transparent transparent;
+
+
+
+}
+
+
+
+.htitle{
+    font-style: normal;
+font-weight: 700;
+font-size: 36px;
+line-height: 44px;
+/* identical to box height */
+
+font-family: 'Montserrat';
+
+/* Gradient 1 */
+
+color: #000;
+
+}
+.stitle{
+    font-style: normal;
+font-weight: 700;
+font-size: 25px;
+/* identical to box height */
+
+
+/* Gradient 1 */
+
+background: linear-gradient(260.99deg, #068028 -2.85%, #3E05A5 149.21%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+margin-top: 24px;
+
+}
+.ptitle{
+    font-style: normal;
+font-weight: 100;
+font-size: 16px;
+line-height: 27px;
+width: 100% !important;
+
+}
+.faq{
+    font-style: normal;
+font-weight: 100;
+font-size: 18px;
+line-height: 27px;
+margin: 0 0 0 10px;
+padding: 0;
+color: #000000;
+
+}
+
+.card1{
+    width: 240px;
+    height: 240px;
+justify-content: center;
+align-items: center;
+display: grid;
+background: rgba(0, 128, 199, 1);
+box-shadow: 0px 4px 25px 5px rgba(0, 0, 0, 0.08);
+border-radius: 20px;
+}
+.card2{
+    width: 240px;
+    height: 240px;
+
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    background: rgba(249, 149, 32, 1);
+    box-shadow: 0px 4px 25px 5px rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+    }
+    .card3{
+        width: 240px;
+        height: 240px;
+     
+        justify-content: center;
+        align-items: center;
+        display: grid;
+        background: rgba(6, 71, 109, 1);
+        box-shadow: 0px 4px 25px 5px rgba(0, 0, 0, 0.08);
+        border-radius: 20px;
+        }
+        .card4{
+            width: 240px;
+            height: 240px;
+            justify-content: center;
+            align-items: center;
+            display: grid;
+            background: rgba(219, 119, 2, 1);
+            box-shadow: 0px 4px 25px 5px rgba(0, 0, 0, 0.08);
+            border-radius: 20px;
+            }
+.step3{
+    background: #15773F;
+     padding: 20px 22px; 
+     height: 60px; 
+     font-size: 20px;
+      line-height: 24px;
+      font-weight: 500;
+      color: #FFFFFF;
+      width: 33%;
+}
+.step3_2{
+    width: 33.5%;
+    padding: 20px 22px; 
+    height: 60px; 
+    font-size: 20px;
+     line-height: 24px;
+     font-weight: 200;
+     color: #FFFFFF;
+}
+.step3_main{
+    display: flex; width: 994px; 
+    justify-content: space-between;
+    margin-top: 10px;
+ 
+}
+
+  .first {
+ background:   #069A45 !important
+}
+.sec {
+    background:  #3C443F !important
+   }
+  .content{
+display: grid !important;
+width: 45%;
+  }
+@media(max-width:767px){
+    .content{
+     
+        width: 100%;
+          }
+          .container{
+              padding: 0 10px 0 10px !important;
+          }
+          .conImg{
+              justify-content: center;
+          }
+}
+  button{
+    display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 0 29px 0 29px;
+height: 60px;
+color: #fff;
+font-style: normal;
+font-weight: 600;
+font-size: 26px;
+line-height: 32px;
+/* identical to box height */
+
+
+
+/* Green 1 */
+
+background: rgba(2, 94, 148, 1);
+box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.25);
+border-radius: 20px;
+}
+.vbtn{
+    float: right;
+     margin-right: 90px;
+     margin-top: 146px;
+}
+@media(max-width:767px){
+    .vbtn{
+       float: none;
+       margin: 40px 20px 0 20px
+    }
+}
+.subicon{
+    font-family: 'Montserrat';
+    font-weight: 300 !important;
+  font-size: 18px !important;
+  margin-top: 6px;
+  color: #fff;
+  }
+  .loc{
+      border: 4px solid rgba(115, 203, 255, 1);
+      margin-top: 30px;
+      height: 116px;
+      border-radius: 20px;
+display: flex;
+align-items: center;
+      justify-content: center;
+
+  }
+  .loc > span{
+      font-size: 15px;
+  }
+  .sbtn{
+    float: right;
+     margin-top: 70px;
+     display: flex;
+     justify-content: end;
+}
+.sp{
+    font-family: 'Montserrat';
+font-style: italic;
+font-weight: 200;
+font-size: 15px;
+line-height: 27px;
+/* identical to box height */
+
+
+color: #000000;
+
+}
+.card__content{
+display: flex; 
+ margin-top: 30px;
+  margin-bottom: 60px; 
+      justify-content: space-between;
+}
+@media(max-width:767px){
+    .card__content{
+        display: grid;
+        margin-top: 30px;
+        margin-bottom: 60px;
+        justify-content: center;
+    }
+}
+
+@media(max-width:767px){
+    .card1{
+        margin-bottom: 20px;
+    }
+    .card2{
+        margin-bottom: 20px;
+    }
+    .card3{
+        margin-bottom: 20px;
+    }
+}
+.bottom{
+   margin-bottom: 65px;
+}
+@media(max-width:767px){
+    .bottom{
+        margin-bottom: 45px;
+        margin-top: 20px;
+     }
+}
+
+.secregister{
+    display: flex;
+}
+@media(max-width:767px){
+    .secregister{
+        display: grid;
+    }  
+    .conImg > img{
+        width: 250px;
+     }
+}
+
+.bottom{
+   margin-top: 88px;
+}
+@media(max-width:767px){
+    .bottom{
+        margin-top: 30px;
+     }
+}
+
+#overlaycontent {
+    width: 60%;
+    height: 50%;
+    margin: auto;
+    border-radius: 20px;
+    background-color: #fff;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    cursor: pointer;
+    
+    button{
+        padding: 48px 0 48px 0;
+      width: 70%;
+      margin: auto;
+     font-weight: 400;
+     
+     background: linear-gradient(260.99deg, #73CBFF -2.85%, #025E94 149.21%);
+     border-radius: 20px;
+     }
+  }
+#overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left:0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    cursor: pointer;
+
+
+  }
+
+
+   @media(max-width:767px){
+    #overlaycontent {
+        position: fixed;
+        width: 90%;
+        height: 50%;
+        top: 25%;
+        left: 5%;
+        border-radius: 20px;
+        background-color: #fff;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        cursor: pointer;
+
+        button{
+            padding: 48px 0 48px 0;
+             width: 80%;
+             margin: auto;
+            font-weight: 400;
+            
+            background: linear-gradient(260.99deg, #73CBFF -2.85%, #025E94 149.21%);
+            border-radius: 20px;
+            }
+      }
+    
+   }

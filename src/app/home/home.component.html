@@ -1,0 +1,1112 @@
+
+   <div id="desktop" class="main" name="main">
+    <div name="mainLeft" class="main__left" >
+        <h3 class="h3">
+          Quick links
+        </h3>
+        <hr>
+        <h6 class="h6" (click)="previousConference()">Previous Conferences</h6>
+        <hr>
+
+        <h6 class="h6">CMDA Nigeria</h6>
+        <hr>
+
+        <h6 class="h6">CMDA Nigeria Global Network </h6>
+        <hr>
+
+        <h6 class="h6">IFEHL</h6>
+        <hr>
+
+        <h6 class="h6">IMM</h6>
+        <hr>
+
+        <h6 class="h6">Trainings</h6>
+        <hr>
+
+      
+    </div>
+
+    <div name="slideMain" class="slideshow-container" id="slideMain">
+      <div name="slidesCon" class="slidesCon fade-in">
+
+        <div class="banner3"> 
+              
+                 
+                       <div style="display: block; margin-top: 300px;">
+                          
+                        
+                           <div class="reg" style="margin-top: 50px;">
+                             <div class="register" (click)="onRegistration()">
+                                 Register
+                               </div>
+                           </div>
+                          
+                       </div>
+           
+              
+              </div> 
+         
+           </div>
+    
+      <div name="slidesCon" class="slidesCon fade-in">
+
+        <div class="banner1"> 
+              
+                 
+                       <div style="display: block; margin-top: 300px;">
+                          
+                        
+                           <div class="reg">
+                             <div class="register" (click)="onRegistration()">
+                                 Register
+                               </div>
+                           </div>
+                          
+                       </div>
+           
+              
+              </div> 
+         
+           </div>
+
+      <div name="slidesCon" class="slidesCon banner2 fade-in">
+  
+        <div style="display: flex;">
+           <div style="flex: 1;" >
+
+           </div>
+
+           <div class="timer">
+            <div style="display: flex; margin-top: 14px;">
+                <div class="timerCard">
+                    <h5 class="h5">{{days}}</h5>
+                    <span>Days</span>
+                     </div>
+                     <div class="timerCard">
+                        <h5 class="h5">{{hrs}}</h5>
+                        <span>Hours</span>
+                         </div>
+              </div>
+              <div style="display: flex;  margin-top: 14px;">
+                <div class="timerCard">
+                    <h5 class="h5">{{mins}}</h5>
+                    <span>Minutes</span>
+                     </div>
+                     <div class="timerCard">
+                        <h5 class="h5">{{secs}}</h5>
+                        <span>Seconds</span>
+                         </div>
+              </div>
+              <div class="toconference">
+                <h4 class="conf">TO THE CONFERENCE</h4>
+              </div>
+           </div>
+        </div>
+    
+    
+    </div>
+
+    
+  
+
+       
+   
+    
+    </div>  
+
+   </div>
+   
+   <div id="mobile" class="main__mobile">
+    <div class="slideshow-container ">
+    
+      <div name="slidesCon" class="slidesCon fade-in">
+
+        <div class="banner3">
+    
+      </div>
+    
+    </div>
+      <div name="slidesCon" class="slidesCon fade-in">
+
+         <div class="banner1">
+
+       </div>
+   
+     </div>
+      
+     <div name="slidesCon" class="slidesCon banner2 fade-in">
+   
+   </div>
+  
+   
+   </div>  
+
+    <div class="timer">
+         <div class="timerCard">
+             <h5 class="h5">{{days}}</h5>
+             <span>Days</span>
+              </div>
+              <div class="timerCard">
+                <h5 class="h5">{{hrs}}</h5>
+                <span>Hours</span>
+                 </div>
+                 <div class="timerCard">
+                   <h5 class="h5">{{mins}}</h5>
+                   <span>Minutes</span>
+                    </div>
+                    <div class="timerCard">
+                       <h5 class="h5">{{secs}}</h5>
+                       <span>Seconds</span>
+                        </div>
+       </div>
+      
+
+ <div class="toconference">
+  <h4 class="conf">TO THE CONFERENCE</h4>
+</div>
+   <div (click)="onRegister()" style="margin-left:5%  ; width: 90%; margin-top: 20px;">
+    <button style="width: 100%;">REGISTER HERE</button>
+   </div>
+
+    <div class="main__left_mobile" >
+        <h3 class="h3">
+          Quick links
+        </h3>
+        <hr>
+        <h6 class="h6" (click)="previousConference()">Previous Conferences</h6>
+        <hr>
+
+        <h6 class="h6">CMDA Nigeria</h6>
+        <hr>
+
+        <h6 class="h6">CMDA Nigeria Global Network </h6>
+        <hr>
+
+        <h6 class="h6">IFEHL</h6>
+        <hr>
+
+        <h6 class="h6">IMM</h6>
+        <hr>
+
+        <h6 class="h6">Trainings</h6>
+        <hr>
+
+      
+    </div>
+
+
+   </div> 
+
+
+    <section name="secregister" class="secregister">
+   <div class="container"  style="padding-top: 60px; padding-bottom: 60px;">
+   
+    <form id="main" style="background: #fff; border-radius: 20px;" name="form" [formGroup]="form" (ngSubmit)="form.valid && onRegister()"  >
+        <h4 *ngIf="pageIndex < 2" class="text-center title">REGISTRATION FORM</h4>
+        <p *ngIf="pageIndex < 2" class="text-center p" style="margin-bottom: 40px;"> 5th Joint National Conference</p>
+        <div *ngIf="pageIndex > 0" style="float: right;   display: flex;  ">
+             <div class="circleStep"  [ngClass]="{'step__active': pageIndex == 1}" >
+
+             </div>
+             <div class="circleStep" [ngClass]="{'step__active': pageIndex == 2}">
+
+            </div>
+            <div class="circleStep" [ngClass]="{'step__active': pageIndex == 3}">
+
+            </div>
+          
+            
+        </div>
+        <div class="step1" *ngIf="pageIndex == 0">
+          <div class="text-con">
+
+          
+           <div class="text">
+            You can register to attend the 5JNC/50th Anniversary event virtually if you cannot do so physically. Registration fee is the same for virtual participants and we trust that such delegates will see this as a contribution towards the success of the conference, especially as a subsidy for students. All delegates attending virtually will receive a unique link for their participation, and conference materials as appropriate. We want you to be a part of this historic hybrid event.
+
+           </div>
+           <div class="subText">
+            Simply choose "Virtual" or "Physical" when prompted to do so.
+           </div>
+           <div class="form-group" style="float: right;">
+            <button  class="next btngroup" (click)="onNext()">Next</button>
+           
+          </div>
+          </div>
+         
+
+            </div>
+        <div class="step1" *ngIf="pageIndex == 1">
+      
+                <div class="step__content">
+                  <div class="form-group">
+                      <input placeholder="First & Last Name" type="text" class="form-control" formControlName="name" [ngClass]="{'is-invalid':form.get('name').touched && form.get('name').invalid}"   />
+                      <div *ngIf="form.get('name').touched && form.get('name').invalid"  class="invalid-feedback">
+                        <div *ngIf="form.get('name').errors.required">First & Last Name  is required</div>
+                     
+                      </div>
+                    </div>
+      
+                  <div class="form-group">
+                      <input placeholder="Email Address" type="text" class="form-control" formControlName="email" [ngClass]="{'is-invalid':form.get('email').touched && form.get('email').invalid}"   />
+                      <div *ngIf="form.get('email').touched && form.get('email').invalid"  class="invalid-feedback">
+                        <div *ngIf="form.get('email').errors.required">Email is required</div>
+                        <div *ngIf="form.get('email').errors.email">Email must be a valid email Address</div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+      
+      <select  [ngClass]="{'is-invalid':form.get('country').touched && form.get('country').invalid}" formControlName="country" name="state" value="Select">
+                     <option value="" selected disabled hidden>Select Country</option>
+                     <option value="Nigeria">Nigeria</option>
+                     <option value="Ghana">Ghana</option>
+                     <option value="Canada">Canada</option>
+                     <option value="Gambia">Gambia</option>
+                     <option value="Zambia">Zambia</option>
+                     <option value="South Africa">South Africa</option>
+                     <option value="United Kingdom">United Kingdom</option>
+                     <option value="United States">United States</option>
+                     <option value="Afghanistan">Afghanistan</option>
+                     <option value="Albania">Albania</option>
+                     <option value="Algeria">Algeria</option>
+                     <option value="American Samoa">American Samoa</option>
+                     <option value="Andorra">Andorra</option>
+                     <option value="Angola">Angola</option>
+                     <option value="Anguilla">Anguilla</option>
+                     <option value="Antartica">Antarctica</option>
+                     <option value="Antigua and Barbuda">Antigua and Barbuda</option>
+                     <option value="Argentina">Argentina</option>
+                     <option value="Armenia">Armenia</option>
+                     <option value="Aruba">Aruba</option>
+                     <option value="Australia">Australia</option>
+                     <option value="Austria">Austria</option>
+                     <option value="Azerbaijan">Azerbaijan</option>
+                     <option value="Bahamas">Bahamas</option>
+                     <option value="Bahrain">Bahrain</option>
+                     <option value="Bangladesh">Bangladesh</option>
+                     <option value="Barbados">Barbados</option>
+                     <option value="Belarus">Belarus</option>
+                     <option value="Belgium">Belgium</option>
+                     <option value="Belize">Belize</option>
+                     <option value="Benin">Benin</option>
+                     <option value="Bermuda">Bermuda</option>
+                     <option value="Bhutan">Bhutan</option>
+                     <option value="Bolivia">Bolivia</option>
+                     <option value="Bosnia and Herzegowina">Bosnia and Herzegowina</option>
+                     <option value="Botswana">Botswana</option>
+                     <option value="Bouvet Island">Bouvet Island</option>
+                     <option value="Brazil">Brazil</option>
+                     <option value="British Indian Ocean Territory">British Indian Ocean Territory</option>
+                     <option value="Brunei Darussalam">Brunei Darussalam</option>
+                     <option value="Bulgaria">Bulgaria</option>
+                     <option value="Burkina Faso">Burkina Faso</option>
+                     <option value="Burundi">Burundi</option>
+                     <option value="Cambodia">Cambodia</option>
+                     <option value="Cameroon">Cameroon</option>
+                   
+                     <option value="Cape Verde">Cape Verde</option>
+                     <option value="Cayman Islands">Cayman Islands</option>
+                     <option value="Central African Republic">Central African Republic</option>
+                     <option value="Chad">Chad</option>
+                     <option value="Chile">Chile</option>
+                     <option value="China">China</option>
+                     <option value="Christmas Island">Christmas Island</option>
+                     <option value="Cocos Islands">Cocos (Keeling) Islands</option>
+                     <option value="Colombia">Colombia</option>
+                     <option value="Comoros">Comoros</option>
+                     <option value="Congo">Congo</option>
+                     <option value="Congo">Congo, the Democratic Republic of the</option>
+                     <option value="Cook Islands">Cook Islands</option>
+                     <option value="Costa Rica">Costa Rica</option>
+                     <option value="Cota D'Ivoire">Cote d'Ivoire</option>
+                     <option value="Croatia">Croatia (Hrvatska)</option>
+                     <option value="Cuba">Cuba</option>
+                     <option value="Cyprus">Cyprus</option>
+                     <option value="Czech Republic">Czech Republic</option>
+                     <option value="Denmark">Denmark</option>
+                     <option value="Djibouti">Djibouti</option>
+                     <option value="Dominica">Dominica</option>
+                     <option value="Dominican Republic">Dominican Republic</option>
+                     <option value="East Timor">East Timor</option>
+                     <option value="Ecuador">Ecuador</option>
+                     <option value="Egypt">Egypt</option>
+                     <option value="El Salvador">El Salvador</option>
+                     <option value="Equatorial Guinea">Equatorial Guinea</option>
+                     <option value="Eritrea">Eritrea</option>
+                     <option value="Estonia">Estonia</option>
+                     <option value="Ethiopia">Ethiopia</option>
+                     <option value="Falkland Islands">Falkland Islands (Malvinas)</option>
+                     <option value="Faroe Islands">Faroe Islands</option>
+                     <option value="Fiji">Fiji</option>
+                     <option value="Finland">Finland</option>
+                     <option value="France">France</option>
+                     <option value="France Metropolitan">France, Metropolitan</option>
+                     <option value="French Guiana">French Guiana</option>
+                     <option value="French Polynesia">French Polynesia</option>
+                     <option value="French Southern Territories">French Southern Territories</option>
+                     <option value="Gabon">Gabon</option>
+                 
+                     <option value="Georgia">Georgia</option>
+                     <option value="Germany">Germany</option>
+                 
+                     <option value="Gibraltar">Gibraltar</option>
+                     <option value="Greece">Greece</option>
+                     <option value="Greenland">Greenland</option>
+                     <option value="Grenada">Grenada</option>
+                     <option value="Guadeloupe">Guadeloupe</option>
+                     <option value="Guam">Guam</option>
+                     <option value="Guatemala">Guatemala</option>
+                     <option value="Guinea">Guinea</option>
+                     <option value="Guinea-Bissau">Guinea-Bissau</option>
+                     <option value="Guyana">Guyana</option>
+                     <option value="Haiti">Haiti</option>
+                     <option value="Heard and McDonald Islands">Heard and Mc Donald Islands</option>
+                     <option value="Holy See">Holy See (Vatican City State)</option>
+                     <option value="Honduras">Honduras</option>
+                     <option value="Hong Kong">Hong Kong</option>
+                     <option value="Hungary">Hungary</option>
+                     <option value="Iceland">Iceland</option>
+                     <option value="India">India</option>
+                     <option value="Indonesia">Indonesia</option>
+                     <option value="Iran">Iran (Islamic Republic of)</option>
+                     <option value="Iraq">Iraq</option>
+                     <option value="Ireland">Ireland</option>
+                     <option value="Israel">Israel</option>
+                     <option value="Italy">Italy</option>
+                     <option value="Jamaica">Jamaica</option>
+                     <option value="Japan">Japan</option>
+                     <option value="Jordan">Jordan</option>
+                     <option value="Kazakhstan">Kazakhstan</option>
+                     <option value="Kenya">Kenya</option>
+                     <option value="Kiribati">Kiribati</option>
+                     <option value="Democratic People's Republic of Korea">Korea, Democratic People's Republic of</option>
+                     <option value="Korea">Korea, Republic of</option>
+                     <option value="Kuwait">Kuwait</option>
+                     <option value="Kyrgyzstan">Kyrgyzstan</option>
+                     <option value="Lao">Lao People's Democratic Republic</option>
+                     <option value="Latvia">Latvia</option>
+                     <option value="Lebanon" selected>Lebanon</option>
+                     <option value="Lesotho">Lesotho</option>
+                     <option value="Liberia">Liberia</option>
+                     <option value="Libyan Arab Jamahiriya">Libyan Arab Jamahiriya</option>
+                     <option value="Liechtenstein">Liechtenstein</option>
+                     <option value="Lithuania">Lithuania</option>
+                     <option value="Luxembourg">Luxembourg</option>
+                     <option value="Macau">Macau</option>
+                     <option value="Macedonia">Macedonia, The Former Yugoslav Republic of</option>
+                     <option value="Madagascar">Madagascar</option>
+                     <option value="Malawi">Malawi</option>
+                     <option value="Malaysia">Malaysia</option>
+                     <option value="Maldives">Maldives</option>
+                     <option value="Mali">Mali</option>
+                     <option value="Malta">Malta</option>
+                     <option value="Marshall Islands">Marshall Islands</option>
+                     <option value="Martinique">Martinique</option>
+                     <option value="Mauritania">Mauritania</option>
+                     <option value="Mauritius">Mauritius</option>
+                     <option value="Mayotte">Mayotte</option>
+                     <option value="Mexico">Mexico</option>
+                     <option value="Micronesia">Micronesia, Federated States of</option>
+                     <option value="Moldova">Moldova, Republic of</option>
+                     <option value="Monaco">Monaco</option>
+                     <option value="Mongolia">Mongolia</option>
+                     <option value="Montserrat">Montserrat</option>
+                     <option value="Morocco">Morocco</option>
+                     <option value="Mozambique">Mozambique</option>
+                     <option value="Myanmar">Myanmar</option>
+                     <option value="Namibia">Namibia</option>
+                     <option value="Nauru">Nauru</option>
+                     <option value="Nepal">Nepal</option>
+                     <option value="Netherlands">Netherlands</option>
+                     <option value="Netherlands Antilles">Netherlands Antilles</option>
+                     <option value="New Caledonia">New Caledonia</option>
+                     <option value="New Zealand">New Zealand</option>
+                     <option value="Nicaragua">Nicaragua</option>
+                     <option value="Niger">Niger</option>
+                     <option value="Niue">Niue</option>
+                     <option value="Norfolk Island">Norfolk Island</option>
+                     <option value="Northern Mariana Islands">Northern Mariana Islands</option>
+                     <option value="Norway">Norway</option>
+                     <option value="Oman">Oman</option>
+                     <option value="Pakistan">Pakistan</option>
+                     <option value="Palau">Palau</option>
+                     <option value="Panama">Panama</option>
+                     <option value="Papua New Guinea">Papua New Guinea</option>
+                     <option value="Paraguay">Paraguay</option>
+                     <option value="Peru">Peru</option>
+                     <option value="Philippines">Philippines</option>
+                     <option value="Pitcairn">Pitcairn</option>
+                     <option value="Poland">Poland</option>
+                     <option value="Portugal">Portugal</option>
+                     <option value="Puerto Rico">Puerto Rico</option>
+                     <option value="Qatar">Qatar</option>
+                     <option value="Reunion">Reunion</option>
+                     <option value="Romania">Romania</option>
+                     <option value="Russia">Russian Federation</option>
+                     <option value="Rwanda">Rwanda</option>
+                     <option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option> 
+                     <option value="Saint LUCIA">Saint LUCIA</option>
+                     <option value="Saint Vincent">Saint Vincent and the Grenadines</option>
+                     <option value="Samoa">Samoa</option>
+                     <option value="San Marino">San Marino</option>
+                     <option value="Sao Tome and Principe">Sao Tome and Principe</option> 
+                     <option value="Saudi Arabia">Saudi Arabia</option>
+                     <option value="Senegal">Senegal</option>
+                     <option value="Seychelles">Seychelles</option>
+                     <option value="Sierra">Sierra Leone</option>
+                     <option value="Singapore">Singapore</option>
+                     <option value="Slovakia">Slovakia (Slovak Republic)</option>
+                     <option value="Slovenia">Slovenia</option>
+                     <option value="Solomon Islands">Solomon Islands</option>
+                     <option value="Somalia">Somalia</option>
+                    
+                     <option value="South Georgia">South Georgia and the South Sandwich Islands</option>
+                     <option value="Span">Spain</option>
+                     <option value="SriLanka">Sri Lanka</option>
+                     <option value="St. Helena">St. Helena</option>
+                     <option value="St. Pierre and Miguelon">St. Pierre and Miquelon</option>
+                     <option value="Sudan">Sudan</option>
+                     <option value="Suriname">Suriname</option>
+                     <option value="Svalbard">Svalbard and Jan Mayen Islands</option>
+                     <option value="Swaziland">Swaziland</option>
+                     <option value="Sweden">Sweden</option>
+                     <option value="Switzerland">Switzerland</option>
+                     <option value="Syria">Syrian Arab Republic</option>
+                     <option value="Taiwan">Taiwan, Province of China</option>
+                     <option value="Tajikistan">Tajikistan</option>
+                     <option value="Tanzania">Tanzania, United Republic of</option>
+                     <option value="Thailand">Thailand</option>
+                     <option value="Togo">Togo</option>
+                     <option value="Tokelau">Tokelau</option>
+                     <option value="Tonga">Tonga</option>
+                     <option value="Trinidad and Tobago">Trinidad and Tobago</option>
+                     <option value="Tunisia">Tunisia</option>
+                     <option value="Turkey">Turkey</option>
+                     <option value="Turkmenistan">Turkmenistan</option>
+                     <option value="Turks and Caicos">Turks and Caicos Islands</option>
+                     <option value="Tuvalu">Tuvalu</option>
+                     <option value="Uganda">Uganda</option>
+                     <option value="Ukraine">Ukraine</option>
+                     <option value="United Arab Emirates">United Arab Emirates</option>
+                  
+                     <option value="United States Minor Outlying Islands">United States Minor Outlying Islands</option>
+                     <option value="Uruguay">Uruguay</option>
+                     <option value="Uzbekistan">Uzbekistan</option>
+                     <option value="Vanuatu">Vanuatu</option>
+                     <option value="Venezuela">Venezuela</option>
+                     <option value="Vietnam">Viet Nam</option>
+                     <option value="Virgin Islands (British)">Virgin Islands (British)</option>
+                     <option value="Virgin Islands (U.S)">Virgin Islands (U.S.)</option>
+                     <option value="Wallis and Futana Islands">Wallis and Futuna Islands</option>
+                     <option value="Western Sahara">Western Sahara</option>
+                     <option value="Yemen">Yemen</option>
+                     <option value="Serbia">Serbia</option>
+                    
+                     <option value="Zimbabwe">Zimbabwe</option>
+
+                         </select>
+                      <div *ngIf="form.get('country').touched && form.get('country').invalid"  class="invalid-feedback">
+                        <div *ngIf="form.get('country').errors.required">Country is required</div>
+                     
+                      </div>
+                    </div>
+                </div>
+      <div class="step__content">
+        <div style="    margin-bottom: 12px;">
+            <div style="display: flex; ">
+    
+                <div class="form-group" style="display: flex !important; align-items: center;">
+                    <div>
+            
+                        <input style="height: 35px !important;" (change)="onCheckBox($event,'f')" type="radio"   checked="checked" name="radio" />
+                      
+            
+                      
+                    </div>
+                    <label for="female" style="margin-left: 10px; color: #000;">Female</label>
+                   
+                  </div>
+            
+                  <div class="form-group" style="display: flex !important; align-items: center; margin-left: 20px;">
+                    <div>
+            
+                        <input style="height: 35px !important;" (change)="onCheckBox($event,'m')"  type="radio"  name="radio" />
+                       
+            
+                      
+                    </div>
+                    <label for="gender" style="margin-left: 10px; color: #000;">Male</label>
+                   
+                  </div>
+        </div>
+          
+
+        <div *ngIf="form.get('gender').invalid"  class="invalid-feedback">
+            <div *ngIf="form.get('gender').errors.required">Gender  is required</div>
+         
+          </div>
+
+          </div>
+      
+          <div class="form-group">
+              <input placeholder="Marital Status" type="text" class="form-control" formControlName="status" [ngClass]="{'is-invalid':form.get('status').touched && form.get('status').invalid}"   />
+              <div *ngIf="form.get('status').touched && form.get('status').invalid"  class="invalid-feedback">
+                <div *ngIf="form.get('status').errors.required">Marital Status is required</div>
+              </div>
+            </div>
+      
+            <div class="form-group">
+              <input placeholder="Enter Phone Number" type="text" class="form-control" formControlName="number" [ngClass]="{'is-invalid':form.get('number').touched && form.get('number').invalid}"   />
+              <div *ngIf="form.get('number').touched && form.get('number').invalid"  class="invalid-feedback">
+                <div *ngIf="form.get('number').errors.required"> Phone Number is required</div>
+      
+              </div>
+            </div>
+            <div class="form-group" style="float: right;">
+              <button  class="next btngroup" (click)="onMode()" [disabled]="!stepOneValid()">Next</button>
+              <!-- <a  [attr.disabled]="!form.valid" target="_blank" class="next">
+                  <span class="nav-link-inner--text">Next</span>
+                </a> -->
+            </div>
+      
+      </div>
+      
+                  </div>
+
+
+                  <div style="margin-top: 65px;" *ngIf="pageIndex == 2">
+               <div style="display: grid;">
+
+                <div class="bfContent">
+
+            
+                <div class="step__content">
+                    <div class="form-group">
+                        <input placeholder="Enter Place of Work/School" type="text" class="form-control" formControlName="place" [ngClass]="{'is-invalid':form.get('place').touched && form.get('place').invalid}"   />
+                        <div *ngIf="form.get('place').touched && form.get('place').invalid"  class="invalid-feedback">
+                          <div *ngIf="form.get('place').errors.required">Place of Work/School is required</div>
+                       
+                        </div>
+                      </div>
+        
+                    <div class="form-group">
+                        <input placeholder="Home Address" type="text" class="form-control" formControlName="home" [ngClass]="{'is-invalid':form.get('home').touched && form.get('home').invalid}"   />
+                        <div *ngIf="form.get('home').touched && form.get('home').invalid"  class="invalid-feedback">
+                          <div *ngIf="form.get('home').errors.required">Home Address is required</div>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+        
+                          <select  [ngClass]="{'is-invalid':form.get('state').touched && form.get('state').invalid}" formControlName="state" name="state" value="Select">
+                                         <option value="" selected disabled hidden>Select State</option>
+                          
+                                          <option value="Abia">Abia</option>
+                                        <option value="Adamawa">Adamawa</option>
+                                        <option value="Akwa Ibom">Akwa Ibom</option>
+                                        <option value="Anambra">Anambra</option>
+                                          <option value="Bauchi">Bauchi</option>
+                                        <option value="Bayelsa">Bayelsa</option>
+                                   
+                                        <option value="Benue">Benue</option>
+                                          <option value="Borno">Borno</option>
+                                          <option value="Cross-River">Cross River</option>
+                                        <option value="Delta">Delta</option>
+                                        <option value="Ebonyi">Ebonyi</option>
+                               
+                                        <option value="Edo">Edo</option>
+                                          <option value="Ekiti">Ekiti</option>
+                                        <option value="Enugu">Enugu</option>
+                                        <option value="Gombe">Gombe</option>
+                                        <option value="Imo">Imo</option>
+                                          <option value="Jigawa">Jigawa</option>
+                                        <option value="Kaduna">Kaduna</option>
+                                        <option value="Kano">Kano</option>
+                                        <option value="Katsina">Katsina</option>
+                                          <option value="Kebbi">Kebbi</option>
+                                        <option value="Kogi">Kogi</option>
+                                        <option value="Kwara">Kwara</option>
+                                        <option value="Lagos">Lagos</option>
+                                          <option value="Nasarawa">Nasarawa</option>
+                                        <option value="Niger">Niger</option>
+                                        <option value="Ogun">Ogun</option>
+                                        <option value="Ondo">Ondo</option>
+                                          <option value="Osun">Osun</option>
+                                        <option value="Oyo">Oyo</option>
+                                        <option value="Plateau">Plateau</option>
+                                        <option value="Rivers">Rivers</option>
+                                          <option value="Sokoto">Sokoto</option>
+                                        <option value="Taraba">Taraba</option>
+                                        <option value="Yobe">Yobe</option>
+                                        <option value="Zamfara">Zamfara</option>
+                                        <option value="FCT Abuja">FCT Abuja</option>
+                                             </select>
+                                          <div *ngIf="form.get('country').touched && form.get('country').invalid"  class="invalid-feedback">
+                                            <div *ngIf="form.get('country').errors.required">Country is required</div>
+                                         
+                                          </div>
+                   </div>
+
+
+                        <div class="form-group">
+                          <input placeholder="City" type="text" class="form-control" formControlName="city" [ngClass]="{'is-invalid':form.get('city').touched && form.get('city').invalid}"   />
+                          <div *ngIf="form.get('city').touched && form.get('city').invalid"  class="invalid-feedback">
+                            <div *ngIf="form.get('city').errors.required">City is required</div>
+                          </div>
+                        </div>
+
+                        <div style="     justify-content: center;
+                        display: flex;
+                        background: #fff;
+                        border-radius: 20px;">
+                            <img src="assets/img/paystack.png" class="img">
+
+                            
+                           </div>
+                   
+                  </div>
+                  <div class="step__content">
+                      <div class="form-group">
+        
+                          <select [ngClass]="{'is-invalid':form.get('category').touched && form.get('category').invalid}" formControlName="category" (change)="setAmount()">
+                                        <option value="Students" selected disabled hidden>Select Category</option>
+                          
+                                        <option value="Students">Students</option>
+                                        <option value="House officers & Corp Members">House officers & Corp Members</option>
+                                        <option value="Doctors">Doctors</option>
+                                        <option value="Doctor with Spouse">Doctor with Spouse</option>
+                                        <option value="Non Doctors">Non Doctors</option>
+                                        <option value="International Delegates">International Delegates</option>
+                                        
+                                             </select>
+                                          <div *ngIf="form.get('category').touched && form.get('category').invalid"  class="invalid-feedback">
+                                            <div *ngIf="form.get('category').errors.required">Category is required</div>
+                                         
+                                          </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                          <input [placeholder]="price" type="text" class="form-control" disabled />
+                                          
+                                        </div>
+                                        <div *ngIf="form.get('category').value === 'Non Doctors'">
+                                          <div class="form-group">
+                                            <input placeholder="profession" type="text" class="form-control" formControlName="profession"   />
+                                          
+                                          </div>
+
+                                         </div>
+                   <div *ngIf="form.get('category').value === 'Doctor with Spouse'">
+                    <div class="form-group">
+                      <input placeholder="Spouse name" type="text" class="form-control" formControlName="spousename"   />
+                    
+                    </div>
+                    <div class="form-group">
+                      <input placeholder="Spouse email" type="text" class="form-control" formControlName="spouseemail"  />
+                     
+                    </div>
+                    <div class="form-group">
+                      <input placeholder="Spouse phone number" type="text" class="form-control" formControlName="spousephone"  />
+                     
+                    </div>
+                   
+                   </div>
+                     <div *ngIf="form.get('category').value === 'Students'" class="form-group">
+        
+                                          <select  [ngClass]="{'is-invalid':form.get('chapter').touched && form.get('chapter').invalid}" formControlName="chapter" >
+                                                         <option value="" selected disabled hidden>Select Chapter</option>
+                                                         <option value="NONE">NONE</option>
+                                                         <option value="ABUJA - UNIVERSITY OF ABUJA TEACHING HOSPITAL CHAPTER">ABUJA - UNIVERSITY OF ABUJA TEACHING HOSPITAL CHAPTER</option>
+                                                         <option value="ABIA STATE - ABIA STATE UNIVERSITY TEACHING HOSPITAL CHAPTER">ABIA STATE - ABIA STATE UNIVERSITY TEACHING HOSPITAL CHAPTER</option>
+                                                         <option value="ABIA STATE - GREGORY UNIVERSITY, UTURU CHAPTER">ABIA STATE - GREGORY UNIVERSITY, UTURU CHAPTER</option>
+                                                         <option value="AKWA IBOM STATE - UNIVERSITY OF UYO TEACHING HOSPITAL CHAPTER">AKWA IBOM STATE - UNIVERSITY OF UYO TEACHING HOSPITAL CHAPTER</option>
+                                                         <option value="ANAMBRA STATE - NNAMDI AZIKIWE UNIVERSITY TEACHING HOSPITAL CHAPTER">ANAMBRA STATE - NNAMDI AZIKIWE UNIVERSITY TEACHING HOSPITAL CHAPTER</option>
+                                                         <option value="ANAMBRA STATE - CHUKWUEMEKA ODUMEGWU OJUKWU UNIVERSITY TEACHING HOSPITAL CHAPTER">ANAMBRA STATE - CHUKWUEMEKA ODUMEGWU OJUKWU UNIVERSITY TEACHING HOSPITAL CHAPTER</option>
+                                                         <option value="BAUCHI STATE - ABUBAKAR TAFAWA BALEWA TEACHING HOSPITAL CHAPTER">BAUCHI STATE - ABUBAKAR TAFAWA BALEWA TEACHING HOSPITAL CHAPTER</option>
+                                                         <option value="BAYELSA STATE - NIGER DELTA UNIVERSITY TEACHING HOSPITAL CHAPTER">BAYELSA STATE - NIGER DELTA UNIVERSITY TEACHING HOSPITAL CHAPTER</option>
+                                                         <option value="BENUE STATE - BENUE STATE UNIVERSITY TEACHING HOSPITAL CHAPTER">BENUE STATE - BENUE STATE UNIVERSITY TEACHING HOSPITAL CHAPTER</option>
+                                                         <option value="BORNO STATE - UNIVERSITY OF MAIDUGURI TEACHING HOSPITAL CHAPTER">BORNO STATE - UNIVERSITY OF MAIDUGURI TEACHING HOSPITAL CHAPTER</option>
+                                                         <option value="CROSS RIVER STATE - UNIVERSITY OF CALABAR TEACHING HOSPITAL CHAPTER">CROSS RIVER STATE - UNIVERSITY OF CALABAR TEACHING HOSPITAL CHAPTER</option>
+                                                         <option value="DELTA STATE - DELTA STATE UNIVERSITY TEACHING HOSPITALCHAPTER">DELTA STATE - DELTA STATE UNIVERSITY TEACHING HOSPITALCHAPTER</option>
+                                                         <option value="EBONYI STATE UNIVERSITY">EBONYI STATE UNIVERSITY</option>
+                                                         <option value="DELTA STATE - ALEX EKWUEME FEDERAL UNIVERSITY, NDIFU-ALIKE IKWO CHAPTER">DELTA STATE - ALEX EKWUEME FEDERAL UNIVERSITY, NDIFU-ALIKE IKWO CHAPTER</option>
+                                                         <option value="EDO STATE - UNIVERSITY OF BENIN TEACHING HOSPITAL CHAPTER">EDO STATE - UNIVERSITY OF BENIN TEACHING HOSPITAL CHAPTER</option>
+                                                         <option value="EDO STATE - IGBENEDION UNIVERSITY TEACHING HOSPITAL CHAPTER">EDO STATE - IGBENEDION UNIVERSITY TEACHING HOSPITAL CHAPTER</option>
+                                                         <option value="EDO STATE - AMBROSE ALLI UNIVERSITY/ IRRUA SPECIALIST TEACHING HOSPITAL CHAPTER">EDO STATE - AMBROSE ALLI UNIVERSITY/ IRRUA SPECIALIST TEACHING HOSPITAL CHAPTER</option>
+                                                         <option value="EDO STATE - EDO UNIVERSITY, IYAMHO CHAPTER">EDO STATE - EDO UNIVERSITY, IYAMHO CHAPTER</option>
+                                                         <option value="EKITI STATE - EKITI STATE UNIVERSITY TEACHING HOSPITAL CHAPTER">EKITI STATE - EKITI STATE UNIVERSITY TEACHING HOSPITAL CHAPTER</option>
+                                                         <option value="EKITI STATE - AFE BABALOLA UNIVERSITY CHAPTER">EKITI STATE - AFE BABALOLA UNIVERSITY CHAPTER</option>
+                                                         <option value="ENUGU STATE - ENUGU STATE UNIVERSITY TEACHING HOSPITAL CHAPTER">ENUGU STATE - ENUGU STATE UNIVERSITY TEACHING HOSPITAL CHAPTER</option>
+                                                         <option value="ENUGU STATE - UNIVERSITY OF NIGERIA TEACHING HOSPITAL CHAPTER">ENUGU STATE - UNIVERSITY OF NIGERIA TEACHING HOSPITAL CHAPTER</option>
+                                                         <option value="GOMBE STATE - GOMBE STATE UNIVERSITY TEACHING HOSPITAL CHAPTER">GOMBE STATE - GOMBE STATE UNIVERSITY TEACHING HOSPITAL CHAPTER</option>
+                                                         <option value="IMO STATE - IMO STATE UNIVERSITY TEACHING HOSPITAL CHAPTER">IMO STATE - IMO STATE UNIVERSITY TEACHING HOSPITAL CHAPTER</option>
+                                                         <option value="KADUNA STATE - AHMADU BELLO UNIVERSITY TEACHING HOSPITAL CHAPTER">KADUNA STATE - AHMADU BELLO UNIVERSITY TEACHING HOSPITAL CHAPTER</option>
+                                                         <option value="KADUNA STATE - KADUNA STATE UNIVERSITY/BARAU DIKKO TEACHING HOSPITAL CHAPTER">KADUNA STATE - KADUNA STATE UNIVERSITY/BARAU DIKKO TEACHING HOSPITAL CHAPTER</option>
+                                                         <option value="KANO STATE - AMINU-KANO TEACHING HOSPITAL CHAPTER">KANO STATE - AMINU-KANO TEACHING HOSPITAL CHAPTER</option>
+                                                         <option value="KOGI STATE - KOGI STATE UNIVERSITY TEACHING HOSPITAL CHAPTER">KOGI STATE - KOGI STATE UNIVERSITY TEACHING HOSPITAL CHAPTER</option>
+                                                         <option value="KWARA STATE - UNIVERSITY OF ILORIN TEACHING HOSPITAL CHAPTER">KWARA STATE - UNIVERSITY OF ILORIN TEACHING HOSPITAL CHAPTER</option>
+                                                         <option value="LAGOS STATE - LAGOS UNIVERSITY TEACHING HOSPITAL CHAPTER">LAGOS STATE - LAGOS UNIVERSITY TEACHING HOSPITAL CHAPTER</option>
+
+                                                         <option value="LAGOS STATE - LAGOS STATE UNIVERSITY TEACHING HOSPITAL CHAPTER">LAGOS STATE - LAGOS STATE UNIVERSITY TEACHING HOSPITAL CHAPTER</option>
+                                                         <option value="OGUN STATE - OLABISI ONABANJO UNIVERSITY TEACHING HOSPITAL CHAPTER">OGUN STATE - OLABISI ONABANJO UNIVERSITY TEACHING HOSPITAL CHAPTER</option>
+
+                                                         <option value="OGUN STATE - BENJAMIN CARSON SCHOOL OF MEDICINE, BABCOCK CHAPTER">OGUN STATE - BENJAMIN CARSON SCHOOL OF MEDICINE, BABCOCK CHAPTER</option>
+                                                         <option value="ONDO STATE - UNIVERSITY OF MEDICAL SCIENCES TEACHING HOSPITAL, ONDO CHAPTER">ONDO STATE - UNIVERSITY OF MEDICAL SCIENCES TEACHING HOSPITAL, ONDO CHAPTER</option>
+                                                         <option value="OSUN STATE - OBAFEMI AWOLOWO UNIVERSITY TEACHING HOSPITAL COMPLEX CHAPTER">OSUN STATE - OBAFEMI AWOLOWO UNIVERSITY TEACHING HOSPITAL COMPLEX CHAPTER</option>
+                                                         <option value="OSUN STATE - LADOKE AKINTOLA UNIVERSITY OF TECHNOLOGY TEACHING HOSPITAL CHAPTER">OSUN STATE - LADOKE AKINTOLA UNIVERSITY OF TECHNOLOGY TEACHING HOSPITAL CHAPTER</option>
+
+                                                         <option value="OSUN STATE - UNIVERSITY OF OSUN CHAPTER">OSUN STATE - UNIVERSITY OF OSUN CHAPTER</option>
+                                                         <option value="OYO STATE - UNIVERSITY COLLEGE HOSPITAL IBADAN CHAPTER">OYO STATE - UNIVERSITY COLLEGE HOSPITAL IBADAN CHAPTER</option>
+                                                         <option value="OYO STATE - BOWEN UNIVERSITY TEACHING HOSPITAL CHAPTER">OYO STATE - BOWEN UNIVERSITY TEACHING HOSPITAL CHAPTER</option>
+                                                         <option value="PLATEAU STATE - JOS UNIVERSITY TEACHING HOSPITAL CHAPTER">PLATEAU STATE - JOS UNIVERSITY TEACHING HOSPITAL CHAPTER</option>
+
+                                                         <option value="PLATEAU STATE - BINGHAM UNIVERSITY TEACHING HOSPITAL CHAPTER">PLATEAU STATE - BINGHAM UNIVERSITY TEACHING HOSPITAL CHAPTER</option>
+                                                         <option value="RIVERS STATE - UNIVERSITY OF PORT-HARCOURT TEACHING HOSPITAL CHAPTER">Abia</option>
+                                                         <option value="RIVERS STATE - PAMO UNIVERSITY OF MEDICAL SCIENCES CHAPTER">RIVERS STATE - PAMO UNIVERSITY OF MEDICAL SCIENCES CHAPTER</option>
+                                                         <option value="SOKOTO STATE - USMAN DANFODIO UNIVERSITY TEACHING HOSPITAL CHAPTER">SOKOTO STATE - USMAN DANFODIO UNIVERSITY TEACHING HOSPITAL CHAPTER</option>
+                                                        <option value="UPTH - University of Port Harcourt">UPTH - University of Port Harcourt</option>
+                                       
+
+                                                      </select>
+                                                          <div *ngIf="form.get('chapter').touched && form.get('chapter').invalid"  class="invalid-feedback">
+                                                            <div *ngIf="form.get('chapter').errors.required">Chapter is required</div>
+                                                         
+                                                          </div>
+                                   </div>
+                                   <div *ngIf="form.get('category').value === 'International Delegates'" class="form-group">
+        
+                                    <select  [ngClass]="{'is-invalid':form.get('chapter').touched && form.get('chapter').invalid}" formControlName="chapter" >
+                                                   <option value="" selected disabled hidden>Select Chapter</option>
+                                                   <option value="Global 1 - Europe/UK">Global1 - Europe/UK</option>
+                                                   <option value="Global 2 - USA/Canada/Caribbean ">Global 2 - USA/Canada/Caribbean </option>
+                                                   <option value="Global 3 - Middle east">Global 3 - Middle east</option>
+                                                   <option value="Global 4 - Australasia">Global 4 - Australasia</option>
+                                                   <option value="Global 5 - Other African Countries">Global 5 - Other African Countries</option>
+                                            
+
+                                                </select>
+                                                    <div *ngIf="form.get('chapter').touched && form.get('chapter').invalid"  class="invalid-feedback">
+                                                      <div *ngIf="form.get('chapter').errors.required">Chapter is required</div>
+                                                   
+                                                    </div>
+                             </div>
+
+                                   <div *ngIf="showOthers()" class="form-group">
+        
+                                      <select  [ngClass]="{'is-invalid':form.get('chapter').touched && form.get('chapter').invalid}" formControlName="chapter" >
+                                                     <option value="" selected disabled hidden>Select Chapter</option>
+                                                     <option value="NONE">NONE</option>
+                                                        <option value="ABUJA - MUNICIPAL CHAPTER">ABUJA - MUNICIPAL CHAPTER</option>
+                                                      <option value="ABUJA - GWAGWALADA CHAPTER">ABUJA - GWAGWALADA CHAPTER</option>
+                                                      <option value="ABIA STATE - UMUAHIA CHAPTER">ABIA STATE - UMUAHIA CHAPTER</option>
+                                                      <option value="ABIA STATE - ABA CHAPTER">ABIA STATE - ABA CHAPTER</option>
+                                                        <option value="ADAMAWA STATE - ADAMAWA STATE CHAPTER">ADAMAWA STATE - ADAMAWA STATE CHAPTER</option>
+                                                      <option value="AKWA IBOM STATE - AKWA IBOM STATE CHAPTER">AKWA IBOM STATE - AKWA IBOM STATE CHAPTER</option>
+                                                      <option value="ANAMBRA STATE - ANAMBRA STATE CHAPTER">ANAMBRA STATE - ANAMBRA STATE CHAPTER</option>
+                                                      <option value="BAUCHI STATE - BAUCHI STATE CHAPTER">BAUCHI STATE - BAUCHI STATE CHAPTER</option>
+                                                        <option value="BAYELSA STATE - BAYELSA STATE CHAPTER">BAYELSA STATE - BAYELSA STATE CHAPTER</option>
+                                                      <option value="BENUE STATE - BENUE STATE CHAPTER">BENUE STATE - BENUE STATE CHAPTER</option>
+                                                      <option value="BORNO STATE - BORNO STATE CHAPTER">BORNO STATE - BORNO STATE CHAPTER</option>
+                                                      <option value="CROSS RIVER STATE - CROSS RIVER STATE CHAPTER">CROSS RIVER STATE - CROSS RIVER STATE CHAPTER</option>
+                                                        <option value="DELTA STATE - DELTA STATE UNIVERSITY TEACHING HOSPITAL, OGHARA CHAPTER">DELTA STATE - DELTA STATE UNIVERSITY TEACHING HOSPITAL, OGHARA CHAPTER</option>
+                                                      <option value="DELTA STATE - FEDERAL MEDICAL CENTER, ASABA CHAPTER">DELTA STATE - FEDERAL MEDICAL CENTER,  ASABA CHAPTER</option>
+                                                      <option value="EBONYI STATE - EBONYI STATE CHAPTER">EBONYI STATE - EBONYI STATE CHAPTER</option>
+                                                      <option value="EDO STATE - UNIVERSITY OF BENIN TEACHING HOSPITAL CHAPTER">EDO STATE - UNIVERSITY OF BENIN TEACHING HOSPITAL CHAPTER</option>
+                                                        <option value="EDO STATE - EDO STATE HOSPITAL">EDO STATE - EDO STATE HOSPITAL</option>
+                                                      <option value="MANAGEMENT BOARD (SHMB) CHAPTER">MANAGEMENT BOARD (SHMB) CHAPTER</option>
+                                                      <option value="EDO STATE - IRRUA SPECIALIST TEACHING HOSPITAL CHAPTER">EDO STATE - IRRUA SPECIALIST TEACHING HOSPITAL CHAPTER</option>
+                                                      <option value="EKITI STATE - EKITI STATE UNIVERSITY TEACHING HOSPITAL ADO-EKITI CHAPTER">EKITI STATE - EKITI STATE UNIVERSITY TEACHING HOSPITAL ADO-EKITI CHAPTER</option>
+                                                        <option value="EKITI STATE - FEDERAL TEACHING HOSPITALIDO-EKITI CHAPTER">EKITI STATE - FEDERAL TEACHING HOSPITAL IDO-EKITI CHAPTER</option>
+                                                      <option value="ENUGU STATE - ENUGU STATE CHAPTER">ENUGU STATE - ENUGU STATE CHAPTER</option>
+                                                      <option value="GOMBE STATE - GOMBE STATE CHAPTER">GOMBE STATE - GOMBE STATE CHAPTER</option>
+                                                        <option value="IMO STATE - IMO STATE CHAPTER">IMO STATE - IMO STATE CHAPTER</option>
+                                                      <option value="KADUNA STATE - AHMADU BELLO UNIVERSITY TEACHING HOSPITAL, ZARIA CHAPTER">KADUNA STATE - AHMADU BELLO UNIVERSITY TEACHING HOSPITAL, ZARIA CHAPTER</option>
+                                                      <option value="KANO STATE - KANO STATE CHAPTER">KANO STATE - KANO STATE CHAPTER</option>
+                                                      <option value="KATSINA STATE - KATSINA STATE CHAPTER">KATSINA STATE - KATSINA STATE CHAPTER</option>
+                                                        <option value="KOGI STATE - KOGI STATE CHAPTER">KOGI STATE - KOGI STATE CHAPTER</option>
+                                                      <option value="KWARA STATE - KWARA STATE CHAPTER">KWARA STATE - KWARA STATE CHAPTER</option>
+                                                      <option value="LAGOS STATE - LAGOS UNIVERSITY TEACHING HOSPITAL CHAPTER">LAGOS STATE - LAGOS UNIVERSITY TEACHING HOSPITAL CHAPTER</option>
+                                                        <option value="NASARAWA STATE - FEDERAL MEDICAL CENTER, KEFFI CHAPTER">NASARAWA STATE - FEDERAL MEDICAL CENTER, KEFFI CHAPTER</option>
+                                                      <option value="NASARAWA STATE - LAFIA CHAPTER">NASARAWA STATE - LAFIA CHAPTER</option>
+                                                      <option value="NIGER STATE - FEDERAL MEDICAL CENTER, BIDA CHAPTER">NIGER STATE - FEDERAL MEDICAL CENTER, BIDA CHAPTER</option>
+                                                      <option value="OGUN STATE - OLABISI ONABANJO UNIVERSITY TEACHING HOSPITAL, SAGAMU CHAPTER">OGUN STATE - OLABISI ONABANJO UNIVERSITY TEACHING HOSPITAL, SAGAMU CHAPTER</option>
+                                                      <option value="OGUN STATE - FEDERAL MEDICAL CENTRE, ABEOKUTA CHAPTER">OGUN STATE - FEDERAL MEDICAL CENTRE, ABEOKUTA CHAPTER</option>
+                                                      <option value="ONDO STATE - FEDERAL MEDICAL CENTRE, OWO CHAPTER">ONDO STATE - FEDERAL MEDICAL CENTRE, OWO CHAPTER</option>
+                                                      <option value="ONDO STATE - UNIVERSITY OF MEDICAL SCIENCES TEACHING HOSPITAL CHAPTER">ONDO STATE - UNIVERSITY OF MEDICAL SCIENCES TEACHING HOSPITAL CHAPTER</option>
+                                                      <option value="OSUN STATE - OBAFEMI AWOLOWO UNIVERSITY TEACHING HOSPITAL COMPLEX, ILE-IFE CHAPTER">OSUN STATE - OBAFEMI AWOLOWO UNIVERSITY TEACHING HOSPITAL COMPLEX, ILE-IFE CHAPTER</option>
+                                                      <option value="OSUN STATE - LADOKE AKINTOLA UNIVERSITY OF TECHNOLOGY TEACHING HOSPITAL, OSOGBO CHAPTER">OSUN STATE - LADOKE AKINTOLA UNIVERSITY OF TECHNOLOGY TEACHING HOSPITAL, OSOGBO CHAPTER</option>
+                                                      <option value="OYO STATE - OYO STATE CHAPTER">OYO STATE - OYO STATE CHAPTER</option>
+                                                      <option value="PLATEAU STATE - PLATEAU STATE CHAPTER">PLATEAU STATE - PLATEAU STATE CHAPTER</option>
+                                                      <option value="RIVERS STATE - RIVERS STATE CHAPTER">RIVERS STATE - RIVERS STATE CHAPTER</option>
+                                                      <option value="SOKOTO STATE - SOKOTO STATE CHAPTER">SOKOTO STATE - SOKOTO STATE CHAPTER</option>
+                                                      <option value="TARABA STATE - TARABA STATE CHAPTER">TARABA STATE - TARABA STATE CHAPTER</option>
+                                                      <option value="ZAMFARA STATE - ZAMFARA STATE CHAPTER">ZAMFARA STATE - ZAMFARA STATE CHAPTER</option>
+
+
+                                                         </select>
+                                                      <div *ngIf="form.get('chapter').touched && form.get('chapter').invalid"  class="invalid-feedback">
+                                                        <div *ngIf="form.get('chapter').errors.required">Chapter is required</div>
+                                                     
+                                                      </div>
+                               </div>
+                             
+
+                            <div *ngIf="form.get('category').value !== 'Students'">
+                              <label style="display: flex; align-items:center">
+                                <input formControlName="donate" type="checkbox"> 
+                                 <div >Would you like to donate?
+                                </div> </label>
+
+                         </div>
+                         
+                            <div class="form-group" *ngIf="form.get('donate').value && form.get('category').value !== 'Students'">
+                              <input placeholder="Enter Amount" type="number" class="form-control" formControlName="donateAmt"
+                               [ngClass]="{'is-invalid':form.get('donateAmt').touched && form.get('donateAmt').value < 2}"  (change)="donationAmount()" />
+                              <div *ngIf="form.get('donateAmt').touched && form.get('donateAmt').value < 2"  class="invalid-feedback">
+                                <div> Please enter amount</div>
+                      
+                              </div>
+                            </div>
+                          
+                  
+      
+                     <div  *ngIf="form.get('category').value === 'Students'" class="form-group">
+        
+                                                                          <select  [ngClass]="{'is-invalid':form.get('level').touched}" formControlName="level" >
+                                                                                         <option value="" selected disabled hidden>Select Level</option>
+                                                                          
+                                                                                          <option value="100l">100l</option>
+                                                                                        <option value="200l">200l</option>
+                                                                                        <option value="300l">300l</option>
+                                                                                        <option value="400l">400l</option>
+                                                                                          <option value="500l">500l</option>
+                                                                                        <option value="600l">600l</option>
+
+                                                                                             </select>
+                                                                                          <div *ngIf="form.get('level').touched && !form.get('donateAmt').value "  class="invalid-feedback">
+                                                                                            <div *ngIf="form.get('level').touched">Level is required</div>
+                                                                                         
+                                                                                          </div>
+                                 </div>
+
+                                 <div >
+                                  <label style="display: flex; align-items:center">
+                                    <input formControlName="terms" type="checkbox">  <div (click)="viewTerms()">Terms and conditions</div> </label>
+                                    <div *ngIf="errorM" style="margin-bottom: 10px" class="invalid-feedback">
+                                      Terms and conditions is required
+                                   
+                                    </div>
+                             </div>
+
+
+
+
+                                 <div style="display:flex; justify-content: end;" >
+
+                                    <div class="form-group" >
+                                        <button class="btngroup"  (click)="onPrevios()" >PREVIOUS</button>
+                                        <!-- <a  [attr.disabled]="!form.valid" target="_blank" class="next">
+                                            <span class="nav-link-inner--text">Next</span>
+                                          </a> -->
+                                      </div>
+                
+                                      <div class="form-group" style="float: right; margin-left: 10px;">
+                                        <button  class="btngroup" (click)="onNext()" [disabled]="!stepTwoValid() || disableBtn()">REGISTER</button>
+                                        <mat-spinner *ngIf="loading" class="spinner"></mat-spinner>
+
+                                      </div>
+                                </div>
+                              </div>
+                            </div>
+                           
+
+               
+               </div>
+                    
+
+          
+                      </div>
+                 
+              </form>
+   </div>
+
+ 
+    </section>
+
+<section>
+  <div class="container" style="margin-top: 100px; padding-bottom: 66px;    background: #fff;"> 
+      <div style="flex: 1; ">
+          <div class="fleft">
+              <h4 class="htitle">FREQUENTLY ASKED QUESTIONS</h4>
+          </div>
+         <div style="margin-top: 20px;" class="fcontent">
+
+            <div style="display: flex;    align-items: center; " (click)="showIndex(1)">
+                <img *ngIf="faqIndex != 1"  src="assets/img/Vector3.png" style="width: 13px;
+                height: 17px;">
+                 <img *ngIf="faqIndex == 1"  src="assets/img/active.png">
+                <p class="faq">What should I do now ?</p>
+
+               
+            </div>
+            <div *ngIf="faqIndex == 1" style=" margin-left: 10px;  margin-top: 5px;">
+              <p class="faq">Click on the Register button, select registration category, fill the registration form,  make payment and prepare to be blessed. Upon payment, a receipt will be sent to your registered email. At any time before the conference, your login details grants you access to your dashboard. This enables you to access information on accommodation and transportation, as well as to order conference materials.</p>
+            </div>
+         </div>
+         <hr>
+         <div class="fcontent">
+
+            <div style="display: flex;    align-items: center; " (click)="showIndex(2)">
+              <img *ngIf="faqIndex != 2"  src="assets/img/Vector3.png" style="width: 13px;
+              height: 17px;">
+               <img *ngIf="faqIndex == 2"  src="assets/img/active.png">
+                <p class="faq">Does Conference offer CME (CPD) Points ?</p>
+            </div>
+            <div *ngIf="faqIndex == 2" style=" margin-left: 10px;  margin-top: 5px;">
+              <p class="faq">Yes the continuing medical education lectures and sessions in the conference will offer 10 CPD Points to all registered participants</p>
+            </div>
+
+         </div>
+   <hr>
+         <div class="fcontent">
+
+            <div style="display: flex;    align-items: center; " (click)="showIndex(3)">
+              <img *ngIf="faqIndex != 3"  src="assets/img/Vector3.png" style="width: 13px;
+              height: 17px;">
+               <img *ngIf="faqIndex == 3"  src="assets/img/active.png">
+                <p class="faq">Is there any discount for couple participants ?</p>
+            </div>
+            <div *ngIf="faqIndex == 3" style=" margin-left: 10px;  margin-top: 5px;">
+              <p class="faq">Yes, there is a discount. Select couple under registration.</p>
+            </div>
+
+         </div>
+         <hr>
+         <div class="fcontent">
+
+            <div style="display: flex;    align-items: center; " (click)="showIndex(4)">
+              <img *ngIf="faqIndex != 4"  src="assets/img/Vector3.png" style="width: 13px;
+              height: 17px;">
+               <img *ngIf="faqIndex == 4"  src="assets/img/active.png">
+                <p class="faq">Can I get media materials ?</p>
+            </div>
+            <div *ngIf="faqIndex == 4" style=" margin-left: 10px;  margin-top: 5px;">
+              <p class="faq">Yes, you can. From our website and social media pages.</p>
+            </div>
+
+         </div>
+
+         <hr>
+         <div class="fcontent">
+
+            <div style="display: flex;    align-items: center; " (click)="showIndex(5)">
+              <img *ngIf="faqIndex != 5"  src="assets/img/Vector3.png" style="width: 13px;
+              height: 17px;">
+               <img *ngIf="faqIndex == 5"  src="assets/img/active.png">
+                <p class="faq">How early can I get media materials ?</p>
+            </div>
+            <div *ngIf="faqIndex == 5" style=" margin-left: 10px;  margin-top: 5px;">
+              <p class="faq">Media materials are updated from time to time. As early as 6 months to the conference, they are available.</p>
+            </div>
+
+         </div>
+         
+         <hr>
+         <div class="fcontent">
+
+            <div style="display: flex;    align-items: center; " (click)="showIndex(6)">
+              <img *ngIf="faqIndex != 6"  src="assets/img/Vector3.png" style="width: 13px;
+              height: 17px;">
+               <img *ngIf="faqIndex == 6"  src="assets/img/active.png">
+                <p class="faq">How much refund do I get if I cancel my participation after registering ?</p>
+            </div>
+            <div *ngIf="faqIndex == 6" style=" margin-left: 10px;  margin-top: 5px;">
+              <p class="faq">  Check our refund <a>policy.</a> </p>
+            </div>
+          
+         </div>
+         
+         <hr>
+         <div class="fcontent">
+
+            <div style="display: flex;    align-items: center; " (click)="showIndex(7)">
+              <img *ngIf="faqIndex != 7"  src="assets/img/Vector3.png" style="width: 13px;
+              height: 17px;">
+               <img *ngIf="faqIndex == 7"  src="assets/img/active.png">
+                <p class="faq">Can I register during the conference ?</p>
+            </div>
+            <div *ngIf="faqIndex == 7" style=" margin-left: 10px;  margin-top: 5px;">
+              <p class="faq">Yes you can but this would attract late registration fees and would make our planning for you more challenging
+              </p>
+            </div>
+
+         </div>
+         <hr>
+
+         <div class="fcontent">
+
+            <div style="display: flex;    align-items: center; " (click)="showIndex(8)">
+              <img *ngIf="faqIndex != 8"  src="assets/img/Vector3.png" style="width: 13px;
+              height: 17px;">
+               <img *ngIf="faqIndex == 8"  src="assets/img/active.png">
+                <p class="faq">Can I get my organization sponsor my attendance ?</p>
+            </div>
+
+            <div *ngIf="faqIndex == 8" style=" margin-left: 10px;  margin-top: 5px;">
+              <p class="faq">
+                Yes, you can get your organisation to sponsor your attendance. Simply select “sponsored by organisation” during registration process.
+              </p>
+            </div>
+
+         </div>
+         <hr>
+         <div class="fcontent">
+
+            <div style="display: flex;    align-items: center; " (click)="showIndex(9)">
+              <img *ngIf="faqIndex != 9"  src="assets/img/Vector3.png" style="width: 13px;
+              height: 17px;">
+               <img *ngIf="faqIndex == 9"  src="assets/img/active.png">
+                <p class="faq">Is there provision for lodging ?</p>
+            </div>
+
+            <div *ngIf="faqIndex == 9" style=" margin-left: 10px; margin-top: 5px;">
+              <p class="faq">
+                Yes, there is. Accommodation will be available 3 months before the conference.
+              </p>
+            </div>
+
+         </div>
+         
+         
+         
+         
+    </div>
+   
+      
+
+
+  </div>
+
+  
+</section>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,146 @@
+
+   <!-- <div class="banner">
+    
+    <div style="display: block; ">
+        <div class="cardbanner">
+          5TH JOINT
+        </div>
+        <div class="conference">
+          NATIONAL CONFERENCE
+        </div>
+        <div class="reg">
+          <div class="register">
+              Register
+            </div>
+        </div>
+       
+    </div>
+
+  
+</div> -->
+<div id="main"   style=" margin-bottom: 70px; margin-top: 70px;">
+
+</div>
+<section class="secregister">
+
+    <div class="conImg" >
+        <img src="assets/img/missions.png" >
+      </div>
+      <div class="container content" >
+
+        <div style="margin-top: 60px;flex: 1; ">
+            <h4 class="htitle">MEDICAL AND MISSION OUTREACH</h4>
+
+            
+           <p class="ptitle">
+            This Medical Missions Outreach is targeted towards the people of Gosa Community<br>
+             in Federal Capital Territory of Nigeria. The plan is to reach over 4,000 people with the <br>gospel of Christ and Medical care. 
+<br><br>
+“For I was hungry and you gave me something to eat, I was thirsty and you gave me <br>
+something to drink, I was a stranger and you invited me in, I needed clothes and you<br> clothed me, I was sick and you looked after me, I was in prison and you came to visit<br> me.” (Matthew 25:35-36)
+
+           </p>
+           <div class="vbtn">
+            <button (click)="openVolunter()">
+                VOLUNTEER</button>
+            <div style="margin-top: 25px; float: right;">
+                <span >To volunteer for this outreach,
+                    <a href="http://bit.ly/GOSA22MISSIONS"><span style="color: rgba(0, 128, 199, 1) ;">click here</span></a> </span>
+
+            </div>
+           </div>
+
+       
+        </div>
+
+ 
+</div>
+
+
+
+
+
+  </section>
+
+
+  <section  class="bottom">
+    <div>
+        <div style="display: grid;" class="container">
+   
+     <div  class="card__content">
+       <div class="card1">
+           <div style="display:grid;    text-align: center;">
+               <img src="assets/img/target.png" style="margin:auto">
+               <div  class="subicon">
+                Target               </div>
+           </div>
+           
+       </div>
+   
+       <div class="card2">
+           <div style="display: grid;;    text-align: center;">
+               <img src="assets/img/medical.png" style="margin:auto">
+               <div  class="subicon">
+                Medical Outreach               </div>
+           </div>
+           
+       </div>
+
+       <div class="card3">
+        <div style="display: grid;    text-align: center;">
+            <img src="assets/img/aid.png" style="margin:auto">
+            <div  class="subicon" style="    padding-top: 30px;">
+                Humanitarian aid            </div>
+        </div>
+        
+    </div>
+    
+    <div class="card4">
+        <div style="display: grid;     text-align: center;">
+            <img src="assets/img/target.png" style="margin:auto">
+            <div  class="subicon">
+                Surgical Outreach            </div>
+        </div>
+        
+    </div>
+    
+   
+     </div>
+
+     <div class="loc">
+          <img  src="assets/img/map.png"> <span style="margin-left: 29px;">Gosa Village, Airport Road Abuja </span>
+    </div>
+    <div class="sbtn">
+        
+        <button (click)="openDonate()" style=" margin-right: 10px;">GIVE/DONATE ITEMS</button>
+        <button (click)="openModal()" >SUPPORT</button>
+       
+       </div>
+       <!-- <div class="bottom">
+        <span class="sp">You can give to support the missions outreach today</span>
+
+       </div> -->
+     
+
+   </div>
+
+
+
+    </div>
+  </section>
+
+  <div id="overlay" *ngIf="showOverlay" (click)="closePop()">
+
+    <div id="overlaycontent">
+      <div>
+        <button (click)="openamount()">PAY WITH PAYSTACK (NGN)</button>
+       </div>
+    
+       <div>
+        <button (click)="openPaypal()">PAY WITH PAYPAL (USD)</button>
+       </div>
+    </div>
+    
+
+
+   </div>

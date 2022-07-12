@@ -1,0 +1,405 @@
+
+
+  <div id="mainmain"   style=" margin-bottom: 70px; margin-top: 70px;">
+
+</div>
+  <section id="desktop" style="display: flex;  margin-bottom: 70px;">
+
+ 
+
+                    <div   style="flex:1;background: #fff;" class="container"> 
+    
+                    
+                     <div style="flex: 1; padding-left: 40px;">
+                            <div style="margin-top: 80px;  padding-left: 20px;">
+                                <h4 class="htitle">FOCUS</h4>
+                               <p class="ptitle">
+                              
+                                CMDA Nigeria 5th Joint National Conference is the largest gathering of <br>
+                                medical and dental doctors and students in Nigeria. Thousands of<br>
+                                 Christian Students, doctors and Health Professionals from Nigeria and<br>
+                                  beyond join together for four days to learn and share ideas. The <br>
+                                  conference format strives to educate, inspire, encourage, connect and <br>equip attendees.
+<br><br>
+                                It provides a unique platform to mobilize, engage, envision, and equip <br>
+                                over 2,000 medics that have the capacity to bring about a paradigm shift<br>
+                                 in the Health System in Nigeria and beyond with the potential to deliver<br>
+                                  an efficient, effective and responsive health service.<br>
+                                Attendance will include medical and dental doctors and students from <br>
+                                all geopolitical zones in Nigeria as well as from diaspora. 
+                                
+
+                               </p>
+                            </div>
+
+
+                          <div style="margin-top: 40px; padding-left: 20px;">
+                            <h4 class="htitle">WHAT TO EXPECT ?</h4>
+                           <p class="ptitle">
+                            Inspiring talks from keynote speakers who are leading practitioners in the health sector<br>
+                            Plenary and parallel sessions in key areas of the health landscape<br>
+                            Times of worship and corporate prayer<br>
+                            Opportunities to network with Like minds  <br>
+                            Scientific Exhibitions<br>
+                            Panel sessions and lots more!
+                                                  </p>
+                        </div>
+                      </div>
+                      
+
+                      
+     
+             
+             
+                  </div>
+                  <div class="conImg" >
+                    <img src="assets/img/spon.png" >
+                  </div>
+                    
+
+    
+
+  </section>
+
+  <section id="mobile" style="display: grid;  margin-bottom: 20px;">
+
+    <div class="conImg" >
+      <img src="assets/img/spon.png" style="width: 250px;">
+    </div>
+      
+
+    <div   style="flex:1;background: #fff;" class="container"> 
+
+    
+     <div style="flex: 1;" class="pLeft">
+            <div class="pTop">
+                <h4 class="htitle">FOCUS</h4>
+               <p class="ptitle">
+              
+                CMDA Nigeria 5th Joint National Conference is the largest gathering of <br>
+                medical and dental doctors and students in Nigeria. Thousands of<br>
+                 Christian Students, doctors and Health Professionals from Nigeria and<br>
+                  beyond join together for four days to learn and share ideas. The <br>
+                  conference format strives to educate, inspire, encourage, connect and <br>equip attendees.
+<br><br>
+                It provides a unique platform to mobilize, engage, envision, and equip <br>
+                over 2,000 medics that have the capacity to bring about a paradigm shift<br>
+                 in the Health System in Nigeria and beyond with the potential to deliver<br>
+                  an efficient, effective and responsive health service.<br>
+                Attendance will include medical and dental doctors and students from <br>
+                all geopolitical zones in Nigeria as well as from diaspora. 
+                
+
+               </p>
+            </div>
+
+
+          <div class="pTop">
+            <h4 class="htitle">WHAT TO EXPECT ?</h4>
+           <p class="ptitle">
+            Inspiring talks from keynote speakers who are leading practitioners in the health sector<br>
+            Plenary and parallel sessions in key areas of the health landscape<br>
+            Times of worship and corporate prayer<br>
+            Opportunities to network with Like minds  <br>
+            Scientific Exhibitions<br>
+            Panel sessions and lots more!
+                                  </p>
+        </div>
+      </div>
+
+  </div>
+
+</section>
+
+   <hr>
+  <section class="secregister sec2"  >
+
+
+    <div class="container" style="justify-content: center;
+    align-items: center;
+    display: grid;">
+
+ 
+  <div class="card__content">
+    <div class="card">
+        <div style="display: grid;">
+            <img src="assets/img/location.png" style="margin:auto">
+            <div  class="subicon">
+               Abuja, Nigeria
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="card" >
+        <div style="display: grid;">
+            <img src="assets/img/exhibition.png" style="margin:auto">
+            <div  class="subicon" >
+               Exhibitions   
+           </div>
+        </div>
+        
+    </div>
+    <div class="card">
+      <div style="display: grid;">
+          <img src="assets/img/Business-Conference.png" style="margin:auto">
+          <div  class="subicon">
+              30 Speakers
+          </div>
+      </div>
+      
+  </div>
+
+  
+  </div>
+
+
+
+  <div class="card__content">
+    <div class="card">
+      <div style="display:grid">
+          <img src="assets/img/calender.png" style="margin:auto">
+          <div  class="subicon">
+            27th - 31st July, 2022
+          </div>
+      </div>
+      
+  </div>
+
+    <div class="card">
+        <div style="display: grid;">
+            <img src="assets/img/Book-And-Pencil.png" style="margin:auto">
+            <div  class="subicon">
+                15+ Breakout Sessions
+            </div>
+        </div>
+        
+    </div>
+   
+    <div class="card">
+        <div style="display: grid;">
+            <img src="assets/img/Bus-Seat-Top.png" style="margin:auto">
+            <div  class="subicon">
+                2000 Seats
+            </div>
+        </div>
+        
+    </div>
+  </div>
+
+
+</div>
+
+
+ 
+  </section>
+  <hr>
+  <section [ngClass]="pageIndex < 3 ? 'secbottom':'secbottom__last'">
+
+    <div  class="container whitebg">
+
+
+      <div class="over">
+        <!-- <div style=" display: flex;   " > -->
+          <div *ngIf="pageIndex < 3" class="circle">
+              <div class="circleStep"  [ngClass]="{'step__active': pageIndex == 1}" >
+    
+              </div>
+              <div class="circleStep" [ngClass]="{'step__active': pageIndex == 2}">
+    
+             </div>
+             <div class="circleStep" [ngClass]="{'step__active': pageIndex == 3}">
+    
+             </div>
+          
+             
+         </div>
+      
+        <!-- </div> -->
+     
+      <div>
+
+
+        <div class="step1" *ngIf="pageIndex == 1"> 
+      
+                      
+            <div style="flex: 1;">
+                  <div class="paddingleft" >
+                      <h4 class="htitle">BENEFITS OF REGISTRATION</h4>
+    
+                      <h4 class="stitle">Early Bed Registration Fees</h4>
+                     <p class="ptitle">
+                        Students| Newly graduated|  NGN 5,000<br>
+                        NYSC| House Officers|  NGN 20,000<br>
+                        Other Doctors NGN 30,000<br>
+                        Doctor with spouse NGN 50,000<br>
+                        Non-Doctors NGN 20,000<br>
+                        International delegates $100<br>
+                     </p>
+                  </div>
+    
+                  <div class="paddingleft" >
+                    <h4 class="stitle">Other Benefits</h4>
+                   <p class="ptitle">
+                    Access to All Sessions<br>
+                    Delegate Packs<br>
+                    Meals during the conference<br>
+                    Certificate of Participation<br>
+                    CME Points for Doctors<br>
+                    Accommodation for students<br>
+                    Shuttle to and from Accommodation facility and Conference Venue (This is for participants accommodated in the conference accommodation and partner hotels)
+    
+                </p>
+                </div>
+            </div>
+
+    
+        </div>
+    
+    
+        <div class="step1" *ngIf="pageIndex == 2"> 
+          
+                          
+            <div style="flex: 1;">
+                  <div  class="paddingleft">
+                      <h4 class="htitle">PERILS OF LATE REGISTRATION</h4>
+    
+                      <h4 class="stitle">Late Bed Registration Fees</h4>
+                     <p class="ptitle">
+                        NYSC| House Officers|  NGN 25,000<br>
+                        Other Doctors NGN 35,000<br>
+                        Doctor with spouse NGN 60,000<br>
+                     </p>
+                  </div>
+    
+                  <div style="margin-top: 40px; " class="paddingleft">
+                    <h4 class="stitle">Benefits at Risk</h4>
+                   <p class="ptitle">
+                    Free accommodation for students is not guaranteed<br><br>
+    
+                    Conference accommodation and partner hotels may be fully booked and so shuttle to and from accommodation facility and Conference Venue is not guaranteed.
+    
+                </p>
+                </div>
+            </div>
+    
+        </div>
+    
+    
+    
+        <div class="step1 over" *ngIf="pageIndex == 3"> 
+          
+                          
+            <div style="flex: 1;">
+           <div class="step3_main">
+          <div class="step3">
+            CATEGORY
+          </div>
+          <div class="step3">
+            EARLY BIRD (22 JUN, 2022)
+        </div>
+        <div class="step3">
+            LATE REG (23 JUN - 13 JUL)
+        </div>
+           </div>
+
+           <div class="step3_main first ">
+            <div class="step3_2 ">
+                Students
+            </div>
+            <div class="step3_2">
+                N5,000
+          </div>
+          <div class="step3_2">
+          
+          </div>
+             </div>
+
+             <div class="step3_main sec">
+                <div class="step3_2">
+                    House officers & Corp Members
+                </div>
+                <div class="step3_2">
+                    N20,000
+              </div>
+              <div class="step3_2">
+                N25,000
+              </div>
+                 </div>
+                 <div class="step3_main first">
+                    <div class="step3_2">
+                        Other Doctors
+                    </div>
+                    <div class="step3_2">
+                        N30,000
+                  </div>
+                  <div class="step3_2">
+                    N35,000
+                  </div>
+                     </div>
+                     <div class="step3_main sec">
+                        <div class="step3_2">
+                            Doctor with Spouse
+                        </div>
+                        <div class="step3_2">
+                            N50,000
+                      </div>
+                      <div class="step3_2">
+                        N60,000
+                      </div>
+                         </div>
+      
+                         
+                         <div class="step3_main first">
+                            <div class="step3_2">
+                                Non Doctors
+                            </div>
+                            <div class="step3_2">
+                                N20,000
+                          </div>
+                          <div class="step3_2">
+                            
+                          </div>
+                             </div>
+      
+                             <div class="step3_main sec">
+                                <div class="step3_2">
+                                    International Delegates
+                                                                </div>
+                                <div class="step3_2">
+                                   $100
+                              </div>
+                              <div class="step3_2">
+                            
+                              </div>
+                                 </div>
+                  
+
+    
+            </div>
+        </div>
+
+        <div style="  justify-content: end; display: flex; margin-top: 30px; margin-bottom: 30px;" class="paddingleft">
+
+            <div  *ngIf="pageIndex > 1">
+                <button   (click)="onPrevios()" >PREVIOUS</button>
+                <!-- <a  [attr.disabled]="!form.valid" target="_blank" class="next">
+                    <span class="nav-link-inner--text">Next</span>
+                  </a> -->
+              </div>
+
+              <div  style="float: right; margin-left: 10px;" >
+                <button   (click)="onNext()" [disabled]="pageIndex > 2">Next</button>
+              
+              </div>
+        </div>
+
+      </div>
+
+      </div>
+         
+
+
+    </div>
+
+  </section>

@@ -1,0 +1,243 @@
+@media (min-width: 768px){
+    .navbar-brand img {
+        height: 100px;
+        width: 220px;
+    }
+}
+
+
+@media (max-width: 768px){
+    .navbar-brand img {
+        height: 80px;
+        width: 120px;
+    }
+}
+li {
+    display: inline-block;
+ }
+
+ .vertical-menu {
+    width: 200px; /* Set a width if you like */
+  }
+  
+  .vertical-menu a {
+    background-color: #eee; /* Grey background color */
+    color: black; /* Black text color */
+    display: block; /* Make the links appear below each other */
+    padding: 12px; /* Add some padding */
+    text-decoration: none; /* Remove underline from links */
+  }
+  
+  .vertical-menu a:hover {
+    color: blue;
+   /* background-color: #ccc; /* Dark grey background on mouse-over */
+  }
+  
+  .vertical-menu a.active {
+  /*   background-color: #04AA6D; Add a green color to the "active/current" link */
+    color: white;
+  }
+  .footer{
+      background: #000402;
+      padding: 0 70px 0 70px;
+  }
+@media(max-width: 768px){
+  .footer{
+    padding: 0 70px 0 40px;
+  }
+
+}
+  @media (max-width: 768px){
+    .container-fluid{
+        /* display: grid; */
+          /* justify-content: center; */
+  /* text-align: center; */
+  width: 100% !important;
+  padding: 15px 0 15px 0 !important;
+}
+}
+.menubar{
+   display: flex; 
+   justify-content: space-evenly;
+}
+@media (max-width: 768px){
+    .menubar{
+        display: grid;
+
+        justify-content: space-evenly;
+     }
+}
+.widget{
+
+        float: left;
+        width: 100%;
+
+}
+
+footer .widget h5 {
+    /* text-transform: uppercase;
+    color: #fff;
+    margin: 0px 0 30px;
+    text-align: start; */
+    font-family: 'Montserrat' !important;
+font-style: normal;
+font-weight: 700;
+font-size: 28px;
+line-height: 34px;
+margin-top: 26px;
+padding-top: 30px;
+
+color: #FFFFFF;
+}
+.widget-links ul {
+    /* float: left !important;
+    width: 100%; */
+    padding: 0;
+    color: #fff;
+    font-family: 'Montserrat' !important;
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 32px;
+
+color: #FFFFFF;
+
+    /* margin: -4px 0 0 0; */
+}
+
+
+.footer ul li a {
+    color: inherit;
+    padding: 0.9375rem;
+    font-weight: 500;
+    font-size: 16px;
+    text-transform: uppercase;
+    border-radius: 3px;
+    text-align: start;
+    color: #fff;
+    /* float: left; */
+    text-decoration: none;
+    display: block;
+}
+
+@media(max-width:767px){
+  footer .widget h5 {
+
+font-weight: 700;
+font-size: 18px;
+line-height: 22px;
+}
+.widget-links ul {
+  font-size: 16px;
+line-height: 22px;
+font-weight: 300;
+}
+.footer ul li a {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 300;
+
+}
+
+}
+.footer ul li {
+    color: #fff;
+    display: flex !important;
+    margin-top: 20px; 
+}
+.copyright > a{
+    color: #fff;
+}
+.copyright{
+    color: #fff;
+}
+
+.vl {
+    border-left: 6px solid #fff;
+    height: 507px;
+    width: 4px;
+  }
+
+  /* Style all font awesome icons */
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  /* Add a hover effect if you want */
+  .fa:hover {
+    opacity: 0.7;
+  }
+  
+  /* Set a specific color for each brand */
+  
+  /* Facebook */
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  
+  /* Twitter */
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+  p{
+    color: #fff;
+   margin-left: 25px;
+  }
+  .middle{
+     display: grid;
+       justify-content: center; 
+        height: 693px; 
+
+        align-items: center;
+  }
+  @media(max-width:768px){
+    .middle{
+      height: 1px;
+    }
+  }
+  @media(max-width:768px){
+    .vl{
+     display: none;
+    }
+  }
+  .col-md-5{
+    position: initial;
+  }
+  .col-md-2{
+    position: initial;
+  }
+  .cdk-overlay-pane{
+    width: 100% !important;
+  }
+  .mat-menu-panel{
+    width: 100% !important;
+  }
+  .img{
+    height: 75%;
+    margin-top: 10px;
+    margin-right: 10px;
+  }
+  @media(max-width:767px){
+    .img{
+      height: 35px;
+      width: 35px;
+    }
+  }
+  .copy{
+    margin-top: 40px;
+    font-family: 'Montserrat' !important;
+
+     font-size: 22px; font-weight: 300;
+  }
+  @media(max-width:767px){
+    .copy{
+      margin: 0 0 60px 0;
+       font-size: 15px; font-weight: 300;
+    }
+  }

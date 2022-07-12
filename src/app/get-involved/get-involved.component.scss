@@ -1,0 +1,353 @@
+
+.content{
+    padding: 11px 108px 0 108px;
+}
+@media(max-width:767px){
+    .content{
+
+        padding: 0 10px 0 10px;
+    }
+}
+
+
+.card:hover{
+    box-shadow: 0px 4px 25px 5px rgba(0, 0, 0, 0.8);
+}
+
+
+.step1{
+    display: flex;
+    margin-top: 60px;
+}
+button{
+    display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 0 24.5px 0 24.5px;
+
+height: 60px;
+color: #fff;
+font-style: normal;
+font-weight: 600;
+font-size: 26px;
+line-height: 32px;
+/* identical to box height */
+
+
+
+/* Green 1 */
+
+background: rgba(2, 94, 148, 1);
+box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.25);
+border-radius: 20px;
+}
+button:disabled{
+
+
+background: rgba(rgb(145, 158, 145), 0.8);
+color: rgb(224, 214, 214);
+}
+.form-group{
+    margin-bottom: 39px !important;
+}
+
+.title{
+    color: #000;
+font-style: normal;
+font-weight: 400;
+font-size: 35px;
+
+
+}
+.p{
+    font-style: normal;
+font-weight: 300;
+font-size: 30px;
+line-height: 37px;
+color: #000;
+}
+.box{
+    border: solid 5px #000;
+    border-color: #000 transparent transparent transparent;
+
+
+
+}
+
+.circleStep{
+    position: static;
+width: 19px;
+height: 19px;
+//background: rgba(255, 255, 255, 0.2);
+
+background: linear-gradient(260.99deg, #068028 -2.85%, #3E05A5 149.21%);
+/* Inside auto layout */
+
+border-radius: 50%;
+margin: 0px  10px 0 0;
+}
+.step__active{
+    background: linear-gradient(260.99deg, #eff3f0 -2.85%, #58319e 149.21%);
+
+    border: #FFFFFF;
+}
+
+.htitle{
+    font-style: normal;
+font-weight: 700;
+font-size: 36px;
+line-height: 44px;
+/* identical to box height */
+
+
+/* Gradient 1 */
+color: #000;
+text-align: initial;
+
+}
+.stitle{
+    font-style: normal;
+font-weight: 700;
+font-size: 25px;
+/* identical to box height */
+
+
+/* Gradient 1 */
+
+background: linear-gradient(260.99deg, #068028 -2.85%, #3E05A5 149.21%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+margin-top: 24px;
+
+}
+.ptitle{
+    font-style: normal;
+font-weight: 100;
+font-size: 18px;
+line-height: 27px;
+width: auto !important;
+text-align: initial;
+
+}
+
+
+.card{
+width: 296px;
+height: 208px;
+justify-content: center;
+align-items: center;
+display: grid;
+background: #FFFFFF;
+box-shadow: 0px 4px 25px 5px rgba(0, 0, 0, 0.08);
+border-radius: 20px;
+}
+@media(max-width:1500px){
+   .card{
+    width: 250px;
+   } 
+}
+@media(max-width:767px){
+    .card{
+        margin-bottom: 20px;
+    }
+}
+.step3{
+    background: #15773F;
+     padding: 20px 22px; 
+     height: 60px; 
+     font-size: 20px;
+      line-height: 24px;
+      font-weight: 500;
+      color: #FFFFFF;
+      width: 33%;
+}
+.step3_2{
+    width: 33.5%;
+    padding: 20px 22px; 
+    height: 60px; 
+    font-size: 20px;
+     line-height: 24px;
+     font-weight: 200;
+     color: #FFFFFF;
+}
+.step3_main{
+    display: flex; width: 994px; 
+    justify-content: space-between;
+    margin-top: 10px;
+ 
+}
+
+  .first {
+ background:   #069A45 !important
+}
+.sec {
+    background:  #3C443F !important
+   }
+  
+   hr{
+    height: 1px;
+    background: #C4C4C4;
+    margin: 21px 24.5px 10px 24.5px;
+    }
+    @media(max-width:767px){
+        hr{
+            margin: 21px 10px 10px 10px
+        }
+    }
+.subicon{
+        font-family: 'Montserrat' !important;;
+font-style: normal;
+font-weight: 500 !important;;
+font-size: 18px !important;;
+line-height: 22px;
+/* identical to box height */
+
+text-align: center;
+
+color: #000000;
+    }
+    .subicon > p{
+        font-family: 'Montserrat';
+font-style: normal;
+font-weight: 300;
+font-size: 18px;
+line-height: 22px;
+/* identical to box height */
+
+text-align: center;
+
+color: #000000;
+  padding: 0;
+  margin: 8px 0  0 0;
+    }
+
+
+      .h6{
+        font-family: 'Montserrat' !important;
+      font-style: normal;
+      font-weight: 200 !important;
+      font-size: 20px !important;
+      margin: 21px 0 35px 0 !important;
+      color: #FFFFFF !important;
+      
+      }
+      .h3{
+        font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 25px;
+      padding: 60px 0 35px 0 !important;
+      color: #FFFFFF;
+      }
+      .slideshow-container {
+        flex: 1;
+      }
+      .slidesCon {
+        display: none;
+       }
+       .fade-in {
+        animation: fadeIn ease 5s;
+        -webkit-animation: fadeIn ease 5s;
+        -moz-animation: fadeIn ease 5s;
+        -o-animation: fadeIn ease 5s;
+        -ms-animation: fadeIn ease 5s;
+      }
+      .secregister{
+        margin-top: 70px;
+         margin-bottom: 70px;
+      }
+      @media(max-width:767px){
+          .secregister{
+              display: grid;
+              margin-top: 40px;
+              margin-bottom: 40px;
+          }
+      }
+      .card__content{
+        display: flex; 
+        margin-top: 37px;
+         margin-bottom: 70px;
+          justify-content: space-evenly;
+      }
+      @media(max-width:767px){
+        .card__content{
+            display: grid; 
+            margin-top: 37px;
+             margin-bottom: 70px;
+              justify-content: space-evenly;
+          }
+      }
+      .img{
+      height: 456px; 
+          width: 100%;
+      }
+      @media(max-width:767px){
+        .img{
+            height: 200px; 
+            width: 100%;
+            }
+      }
+
+      #overlaycontent {
+        width: 60%;
+        height: 50%;
+        margin: auto;
+        border-radius: 20px;
+        background-color: #fff;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        cursor: pointer;
+      }
+    #overlay {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left:0;
+        bottom: 0;
+        background-color: rgba(0,0,0,0.5);
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        cursor: pointer;
+      }
+      button{
+          padding: 48px 0 48px 0;
+        width: 70%;
+        margin: auto;
+       font-weight: 400;
+       
+       background: linear-gradient(260.99deg, #73CBFF -2.85%, #025E94 149.21%);
+       border-radius: 20px;
+       }
+
+       @media(max-width:767px){
+        #overlaycontent {
+            position: fixed;
+            width: 90%;
+            height: 50%;
+            top: 25%;
+            left: 5%;
+            border-radius: 20px;
+            background-color: #fff;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            cursor: pointer;
+          }
+          button{
+           padding: 48px 0 48px 0;
+            width: 80%;
+            margin: auto;
+           font-weight: 400;
+           
+           background: linear-gradient(260.99deg, #73CBFF -2.85%, #025E94 149.21%);
+           border-radius: 20px;
+           }
+       }

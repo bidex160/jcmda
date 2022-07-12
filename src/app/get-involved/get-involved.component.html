@@ -1,0 +1,100 @@
+
+
+<div id="main">
+
+</div>
+
+<div class="content" >
+
+
+<section class="secregister"  >
+    <div class="slideshow-container ">
+        <div name="slidesCon" class="slidesCon fade-in">
+            <img src="assets/img/involved1.png" class="img" >
+          </div>
+
+          <div name="slidesCon" class="slidesCon fade-in">
+            <img src="assets/img/involved2.png" class="img" >
+          </div>
+
+          <div name="slidesCon" class="slidesCon fade-in">
+            <img src="assets/img/involved3.png" class="img" >
+          </div>
+
+
+    </div>
+   
+      <hr>
+      <div class="card__content">
+        <div class="card"  onclick="location.href='#';"  style="cursor: pointer;">
+            <div style="display: grid; text-align: center;">
+                <img src="assets/img/Business-Conference.png" style="margin:auto">
+                <div  class="subicon">
+                    Membership
+                    <p>Become a CMDA Nigeria Memebr</p>
+                </div>
+            </div>
+            
+        </div>
+    
+        <div class="card"  onclick="location.href='#';"  style="cursor: pointer;" >
+            <div style="display: grid; text-align: center;">
+                <img src="assets/img/Prayer.png" style="margin:auto">
+                <div  class="subicon" >
+                    Prayer   
+                   <p>Join prayer sessions</p>
+
+               </div>
+            </div>
+            
+        </div>
+        <div 
+        class="card" (click)="openModal()">
+          <div style="display: grid; text-align: center;">
+              <img src="assets/img/Crowdfunding.png" style="margin:auto">
+              <div  class="subicon">
+                Donations   
+
+                <p>Support CMDA Nigeria</p>
+              </div>
+          </div>
+          
+      </div>
+
+      <div class="card" (click)="openVolunter()"  style="cursor: pointer;">
+        <div style="display: grid;text-align: center;">
+            <img src="assets/img/Trust.png" style="margin:auto">
+            <div  class="subicon">
+                Volunteer   
+                <p>Become a volunteer</p>
+            </div>
+        </div>
+        
+    </div>
+    
+      
+      </div>
+ 
+
+   </section>
+ 
+   <div id="overlay" *ngIf="showOverlay" (click)="closePop()">
+
+    <div id="overlaycontent">
+      <div>
+        <button (click)="openamount()">PAY WITH PAYSTACK (NGN)</button>
+       </div>
+    
+       <div>
+        <button (click)="openPaypal()">PAY WITH PAYPAL (USD)</button>
+       </div>
+
+       
+    </div>
+    
+
+
+   </div>
+   <mat-spinner *ngIf="loading" class="spinner"></mat-spinner>
+
+</div>

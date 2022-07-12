@@ -1,0 +1,55 @@
+
+
+    <div class="modal-body" [ngClass]="data ? 'term_body':''">
+  
+        <div *ngIf="!data" class="inner">
+            <div>
+                <img src="assets/img/person.png" style="height: 200px;">
+            </div>
+       
+         <div class="title">
+            REGISTRATION SUCCESSFUL
+         </div>
+         <div class="p">
+            Registration confirmations has been sent to the email address provided during the registration process.
+<br>
+<br>
+            If you did not receive your confirmation, please contact conference@cmdanigeria.org  on +234 80 9153 3334
+         </div>
+        </div>
+
+        <div *ngIf="data" class="terms">
+            <div (click)="closeModal()" style="display: flex; justify-content:end">
+                <img src="assets/img/Cancel.png">
+            </div>
+       
+         <div class="title2">
+            TERMS AND CONDITION
+         </div>
+         <div class="p" style="text-align: inherit;">
+            Registration confirmations are auto-generated and sent to the email address provided during the registration process.
+            <br>
+            <br>
+If you did not receive your confirmation, please contact conference@cmdanigeria.org or call Chioma on 
++234 803 335 1704
+         </div>
+
+         <div class="title2" >
+            REFUND POLICY
+         </div>
+         <div class="p" style="text-align: inherit;">
+            You can convert your registration to donation towards the conference if you would not be able to make it for the conference.
+<br><br>
+            Conference registration fees are 75% refundable only if a mail containing reasons for cancellation, proof of payment and account details for refund is sent to conference@cmdanigeria.org on or before June 1, 2022.
+            <br><br>     
+            Registration cancellations received after June 1st 2022 are not refundable.
+            <br><br>
+            You cannot reinstate a registration after you cancel it. If you cancel and are entitled to a refund, expect the refund within 60 days.
+            <br><br>  
+            Note: If you Cancel/transfer your REGISTRATION, changes will not be automatically reflected on your hotel reservation, so it's your responsibility to contact our Accommodation LOC  08012345678 in order to cancel or change your reservation.
+         </div>
+        </div>
+
+        
+    
+    </div>
