@@ -249,24 +249,27 @@
       </div>
     </div>
   </div>
+  
+
+
   <div *ngIf="hotelIndex == 2" class="hotel__card">
-    <img src="assets/img/saint.png" style="    width: 100%;">
+    <img src="assets/img/mission.jpeg" style="    width: 100%;">
     <div class="hotelContent" >
-      <p class="hotitle">All Saint Guest House
+      <p class="hotitle">Missions Guest House
       </p>
-      <p class="name">No 26 , Tamale street, Zone 3, Wuse.</p>
-      <p class="price">8,925 <span>/ night</span></p>
-      <p class="distant"> 12mins 6.3km</p>
+      <p class="name">34, Blantyre Street, Adetokunbo Ademola Cres, FCT.</p>
+      <p class="price">13,230 <span>/ night</span></p>
+      <p class="distant"> 13mins 7.0km</p>
     
 
       <div style="display: flex;  justify-content: space-around;">
         <div></div>
         <button
-        (click)="bookNow('All Saint Guest House',8925)">
+        (click)="bookNow('Missions Guest House',13230)">
         BOOK NOW</button>
         <div style="display:flex; flex-direction:column; align-items:flex-end">
           <div class="counter">
-            <p class="ctext"  *ngIf="bookingStat">{{70 - this.bookingStat?.saint}}</p>
+            <p class="ctext"  *ngIf="bookingStat">{{70 - this.bookingStat?.missions}}</p>
           </div>
            
             <p class="txt">
@@ -400,6 +403,30 @@
       <div style="display:flex; flex-direction:column; align-items:flex-end">
         <div class="counter">
           <p class="ctext"  *ngIf="bookingStat">{{100 - this.bookingStat?.top}}</p>
+        </div>
+         
+          <p class="txt">
+            ROOMS/<br> AVAILABLE
+          </p>
+      </div>
+    </div>
+  </div>
+</div>
+<div   class="hotel__card">
+  <img src="assets/img/mission.jpeg" style="    width: 100%;">
+  <div class="hotelContent" >
+    <p class="hotitle">Missions Guest House
+    </p>
+    <p class="name">34, Blantyre Street, Adetokunbo Ademola Cres, FCT.</p>
+    <p class="price">13,230 <span>/ night</span></p>
+    <p class="distant">13mins 7.0km</p>
+    <div style="display: flex;  justify-content: space-around;">
+      <div></div>
+      <button
+      (click)="bookNow('Missions Guest House',13230)">BOOK NOW</button>
+      <div style="display:flex; flex-direction:column; align-items:flex-end">
+        <div class="counter">
+          <p class="ctext"  *ngIf="bookingStat">{{70 - this.bookingStat?.missions}}</p>
         </div>
          
           <p class="txt">

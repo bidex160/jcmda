@@ -376,6 +376,7 @@ openModal(){
               this.form.get('amount').patchValue(59442.5)
               this.price = "#59,442.5"
               break;
+              
               default:
                 this.form.get('category').patchValue('Students')
                 this.form.get('amount').patchValue(5037.5)

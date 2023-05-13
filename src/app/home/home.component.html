@@ -203,7 +203,9 @@
    
     <form id="main" style="background: #fff; border-radius: 20px;" name="form" [formGroup]="form" (ngSubmit)="form.valid && onRegister()"  >
         <h4 *ngIf="pageIndex < 2" class="text-center title">REGISTRATION FORM</h4>
-        <p *ngIf="pageIndex < 2" class="text-center p" style="margin-bottom: 40px;"> 5th Joint National Conference</p>
+        <p *ngIf="pageIndex < 2" class="text-center p" style="margin-bottom: 20px;"> 5th Joint National Conference</p>
+        <p  class="text-center notice" style="margin-bottom: 20px;"> Registration site is closed for student's category.</p>
+
         <div *ngIf="pageIndex > 0" style="float: right;   display: flex;  ">
              <div class="circleStep"  [ngClass]="{'step__active': pageIndex == 1}" >
 
@@ -671,13 +673,12 @@
                           <select [ngClass]="{'is-invalid':form.get('category').touched && form.get('category').invalid}" formControlName="category" (change)="setAmount()">
                                         <option value="Students" selected disabled hidden>Select Category</option>
                           
-                                        <option value="Students">Students</option>
+                                        <!-- <option value="Students">Students</option> -->
                                         <option value="House officers & Corp Members">House officers & Corp Members</option>
                                         <option value="Doctors">Doctors</option>
                                         <option value="Doctor with Spouse">Doctor with Spouse</option>
                                         <option value="Non Doctors">Non Doctors</option>
                                         <option value="International Delegates">International Delegates</option>
-                                        
                                              </select>
                                           <div *ngIf="form.get('category').touched && form.get('category').invalid"  class="invalid-feedback">
                                             <div *ngIf="form.get('category').errors.required">Category is required</div>
@@ -696,6 +697,7 @@
                                           </div>
 
                                          </div>
+
                    <div *ngIf="form.get('category').value === 'Doctor with Spouse'">
                     <div class="form-group">
                       <input placeholder="Spouse name" type="text" class="form-control" formControlName="spousename"   />
@@ -711,6 +713,7 @@
                     </div>
                    
                    </div>
+
                      <div *ngIf="form.get('category').value === 'Students'" class="form-group">
         
                                           <select  [ngClass]="{'is-invalid':form.get('chapter').touched && form.get('chapter').invalid}" formControlName="chapter" >
@@ -722,18 +725,20 @@
                                                          <option value="AKWA IBOM STATE - UNIVERSITY OF UYO TEACHING HOSPITAL CHAPTER">AKWA IBOM STATE - UNIVERSITY OF UYO TEACHING HOSPITAL CHAPTER</option>
                                                          <option value="ANAMBRA STATE - NNAMDI AZIKIWE UNIVERSITY TEACHING HOSPITAL CHAPTER">ANAMBRA STATE - NNAMDI AZIKIWE UNIVERSITY TEACHING HOSPITAL CHAPTER</option>
                                                          <option value="ANAMBRA STATE - CHUKWUEMEKA ODUMEGWU OJUKWU UNIVERSITY TEACHING HOSPITAL CHAPTER">ANAMBRA STATE - CHUKWUEMEKA ODUMEGWU OJUKWU UNIVERSITY TEACHING HOSPITAL CHAPTER</option>
-                                                         <option value="BAUCHI STATE - ABUBAKAR TAFAWA BALEWA TEACHING HOSPITAL CHAPTER">BAUCHI STATE - ABUBAKAR TAFAWA BALEWA TEACHING HOSPITAL CHAPTER</option>
+                                                         <option value="BAUCHI STATE - ABUBAKAR TAFAWA BALEWA TEACHING HOSPITAL CHAPTER ">BAUCHI STATE - ABUBAKAR TAFAWA BALEWA TEACHING HOSPITAL CHAPTER </option>
                                                          <option value="BAYELSA STATE - NIGER DELTA UNIVERSITY TEACHING HOSPITAL CHAPTER">BAYELSA STATE - NIGER DELTA UNIVERSITY TEACHING HOSPITAL CHAPTER</option>
+                                                         <option value="BAYELSA STATE - BAYELSA MEDICAL UNIVERSITY (BMU)">BAYELSA STATE - BAYELSA MEDICAL UNIVERSITY (BMU)</option>
                                                          <option value="BENUE STATE - BENUE STATE UNIVERSITY TEACHING HOSPITAL CHAPTER">BENUE STATE - BENUE STATE UNIVERSITY TEACHING HOSPITAL CHAPTER</option>
+                                                         <option value="BENUE STATE - FEDERAL UNIVERSITY OF HEALTH SCIENCES OTUKPO">BENUE STATE - FEDERAL UNIVERSITY OF HEALTH SCIENCES OTUKPO</option>
                                                          <option value="BORNO STATE - UNIVERSITY OF MAIDUGURI TEACHING HOSPITAL CHAPTER">BORNO STATE - UNIVERSITY OF MAIDUGURI TEACHING HOSPITAL CHAPTER</option>
                                                          <option value="CROSS RIVER STATE - UNIVERSITY OF CALABAR TEACHING HOSPITAL CHAPTER">CROSS RIVER STATE - UNIVERSITY OF CALABAR TEACHING HOSPITAL CHAPTER</option>
-                                                         <option value="DELTA STATE - DELTA STATE UNIVERSITY TEACHING HOSPITALCHAPTER">DELTA STATE - DELTA STATE UNIVERSITY TEACHING HOSPITALCHAPTER</option>
-                                                         <option value="EBONYI STATE UNIVERSITY">EBONYI STATE UNIVERSITY</option>
-                                                         <option value="DELTA STATE - ALEX EKWUEME FEDERAL UNIVERSITY, NDIFU-ALIKE IKWO CHAPTER">DELTA STATE - ALEX EKWUEME FEDERAL UNIVERSITY, NDIFU-ALIKE IKWO CHAPTER</option>
+                                                         <option value="DELTA STATE - DELTA STATE UNIVERSITY TEACHING HOSPITAL CHAPTER">DELTA STATE - DELTA STATE UNIVERSITY TEACHING HOSPITAL CHAPTER</option>
+                                                         <option value="EBONYI STATE - EBONYI STATE UNIVERSITY">EBONYI STATE - EBONYI STATE UNIVERSITY</option>
+                                                         <option value="EBONYI STATE - ALEX EKWUEME FEDERAL UNIVERSITY, NDIFU-ALIKE IKWO CHAPTER">EBONYI STATE - ALEX EKWUEME FEDERAL UNIVERSITY, NDIFU-ALIKE IKWO CHAPTER</option>
                                                          <option value="EDO STATE - UNIVERSITY OF BENIN TEACHING HOSPITAL CHAPTER">EDO STATE - UNIVERSITY OF BENIN TEACHING HOSPITAL CHAPTER</option>
-                                                         <option value="EDO STATE - IGBENEDION UNIVERSITY TEACHING HOSPITAL CHAPTER">EDO STATE - IGBENEDION UNIVERSITY TEACHING HOSPITAL CHAPTER</option>
+                                                         <option value="EDO STATE - IGBENEDION UNIVERSITY TEACHING HOSPITAL CHAPTER">EDO STATE - IGBENEDION UNIVERSITY TEACHING HOSPITAL CHAPTER</option>                                        
                                                          <option value="EDO STATE - AMBROSE ALLI UNIVERSITY/ IRRUA SPECIALIST TEACHING HOSPITAL CHAPTER">EDO STATE - AMBROSE ALLI UNIVERSITY/ IRRUA SPECIALIST TEACHING HOSPITAL CHAPTER</option>
-                                                         <option value="EDO STATE - EDO UNIVERSITY, IYAMHO CHAPTER">EDO STATE - EDO UNIVERSITY, IYAMHO CHAPTER</option>
+                                                         <option value="EDO STATE - EDO STATE UNIVERSITY UZAIRUE">EDO STATE - EDO STATE UNIVERSITY UZAIRUE</option>
                                                          <option value="EKITI STATE - EKITI STATE UNIVERSITY TEACHING HOSPITAL CHAPTER">EKITI STATE - EKITI STATE UNIVERSITY TEACHING HOSPITAL CHAPTER</option>
                                                          <option value="EKITI STATE - AFE BABALOLA UNIVERSITY CHAPTER">EKITI STATE - AFE BABALOLA UNIVERSITY CHAPTER</option>
                                                          <option value="ENUGU STATE - ENUGU STATE UNIVERSITY TEACHING HOSPITAL CHAPTER">ENUGU STATE - ENUGU STATE UNIVERSITY TEACHING HOSPITAL CHAPTER</option>
@@ -744,28 +749,25 @@
                                                          <option value="KADUNA STATE - KADUNA STATE UNIVERSITY/BARAU DIKKO TEACHING HOSPITAL CHAPTER">KADUNA STATE - KADUNA STATE UNIVERSITY/BARAU DIKKO TEACHING HOSPITAL CHAPTER</option>
                                                          <option value="KANO STATE - AMINU-KANO TEACHING HOSPITAL CHAPTER">KANO STATE - AMINU-KANO TEACHING HOSPITAL CHAPTER</option>
                                                          <option value="KOGI STATE - KOGI STATE UNIVERSITY TEACHING HOSPITAL CHAPTER">KOGI STATE - KOGI STATE UNIVERSITY TEACHING HOSPITAL CHAPTER</option>
-                                                         <option value="KWARA STATE - UNIVERSITY OF ILORIN TEACHING HOSPITAL CHAPTER">KWARA STATE - UNIVERSITY OF ILORIN TEACHING HOSPITAL CHAPTER</option>
+                                                         <option value="KOGI STATE - FEDERAL UNIVERSITY LOKOJA">KOGI STATE - FEDERAL UNIVERSITY LOKOJA</option>
+                                                        <option value="KWARA STATE - UNIVERSITY OF ILORIN TEACHING HOSPITAL CHAPTER">KWARA STATE - UNIVERSITY OF ILORIN TEACHING HOSPITAL CHAPTER</option>
                                                          <option value="LAGOS STATE - LAGOS UNIVERSITY TEACHING HOSPITAL CHAPTER">LAGOS STATE - LAGOS UNIVERSITY TEACHING HOSPITAL CHAPTER</option>
-
                                                          <option value="LAGOS STATE - LAGOS STATE UNIVERSITY TEACHING HOSPITAL CHAPTER">LAGOS STATE - LAGOS STATE UNIVERSITY TEACHING HOSPITAL CHAPTER</option>
                                                          <option value="OGUN STATE - OLABISI ONABANJO UNIVERSITY TEACHING HOSPITAL CHAPTER">OGUN STATE - OLABISI ONABANJO UNIVERSITY TEACHING HOSPITAL CHAPTER</option>
-
                                                          <option value="OGUN STATE - BENJAMIN CARSON SCHOOL OF MEDICINE, BABCOCK CHAPTER">OGUN STATE - BENJAMIN CARSON SCHOOL OF MEDICINE, BABCOCK CHAPTER</option>
                                                          <option value="ONDO STATE - UNIVERSITY OF MEDICAL SCIENCES TEACHING HOSPITAL, ONDO CHAPTER">ONDO STATE - UNIVERSITY OF MEDICAL SCIENCES TEACHING HOSPITAL, ONDO CHAPTER</option>
                                                          <option value="OSUN STATE - OBAFEMI AWOLOWO UNIVERSITY TEACHING HOSPITAL COMPLEX CHAPTER">OSUN STATE - OBAFEMI AWOLOWO UNIVERSITY TEACHING HOSPITAL COMPLEX CHAPTER</option>
-                                                         <option value="OSUN STATE - LADOKE AKINTOLA UNIVERSITY OF TECHNOLOGY TEACHING HOSPITAL CHAPTER">OSUN STATE - LADOKE AKINTOLA UNIVERSITY OF TECHNOLOGY TEACHING HOSPITAL CHAPTER</option>
-
                                                          <option value="OSUN STATE - UNIVERSITY OF OSUN CHAPTER">OSUN STATE - UNIVERSITY OF OSUN CHAPTER</option>
                                                          <option value="OYO STATE - UNIVERSITY COLLEGE HOSPITAL IBADAN CHAPTER">OYO STATE - UNIVERSITY COLLEGE HOSPITAL IBADAN CHAPTER</option>
                                                          <option value="OYO STATE - BOWEN UNIVERSITY TEACHING HOSPITAL CHAPTER">OYO STATE - BOWEN UNIVERSITY TEACHING HOSPITAL CHAPTER</option>
+                                                         <option value="OYO STATE - LADOKE AKINTOLA UNIVERSITY OF TECHNOLOGY TEACHING HOSPITAL CHAPTER">OYO STATE - LADOKE AKINTOLA UNIVERSITY OF TECHNOLOGY TEACHING HOSPITAL CHAPTER</option>
                                                          <option value="PLATEAU STATE - JOS UNIVERSITY TEACHING HOSPITAL CHAPTER">PLATEAU STATE - JOS UNIVERSITY TEACHING HOSPITAL CHAPTER</option>
-
                                                          <option value="PLATEAU STATE - BINGHAM UNIVERSITY TEACHING HOSPITAL CHAPTER">PLATEAU STATE - BINGHAM UNIVERSITY TEACHING HOSPITAL CHAPTER</option>
-                                                         <option value="RIVERS STATE - UNIVERSITY OF PORT-HARCOURT TEACHING HOSPITAL CHAPTER">Abia</option>
+                                                         <option value="RIVERS STATE - UNIVERSITY OF PORT-HARCOURT TEACHING HOSPITAL CHAPTER">RIVERS STATE - UNIVERSITY OF PORT-HARCOURT TEACHING HOSPITAL CHAPTER</option>
                                                          <option value="RIVERS STATE - PAMO UNIVERSITY OF MEDICAL SCIENCES CHAPTER">RIVERS STATE - PAMO UNIVERSITY OF MEDICAL SCIENCES CHAPTER</option>
+                                                         <option value="RIVERS STATE - RIVERS STATE UNIVERSITY TEACHING HOSPITAL CHAPTER">RIVERS STATE - RIVERS STATE UNIVERSITY TEACHING HOSPITAL CHAPTER</option>
                                                          <option value="SOKOTO STATE - USMAN DANFODIO UNIVERSITY TEACHING HOSPITAL CHAPTER">SOKOTO STATE - USMAN DANFODIO UNIVERSITY TEACHING HOSPITAL CHAPTER</option>
-                                                        <option value="UPTH - University of Port Harcourt">UPTH - University of Port Harcourt</option>
-                                       
+                                                  
 
                                                       </select>
                                                           <div *ngIf="form.get('chapter').touched && form.get('chapter').invalid"  class="invalid-feedback">
@@ -792,8 +794,11 @@
                              </div>
 
                                    <div *ngIf="showOthers()" class="form-group">
-        
-                                      <select  [ngClass]="{'is-invalid':form.get('chapter').touched && form.get('chapter').invalid}" formControlName="chapter" >
+                                      <input placeholder="Enter chapter" type="text" class="form-control" formControlName="chapter" [ngClass]="{'is-invalid':form.get('chapter').touched && form.get('chapter').invalid}"   />
+                                      <div *ngIf="form.get('chapter').touched && form.get('chapter').invalid"  class="invalid-feedback">
+                                        <div *ngIf="form.get('chapter').errors.required">Chapter is required</div>
+                                      </div>
+                                      <!-- <select  [ngClass]="{'is-invalid':form.get('chapter').touched && form.get('chapter').invalid}" formControlName="chapter" >
                                                      <option value="" selected disabled hidden>Select Chapter</option>
                                                      <option value="NONE">NONE</option>
                                                         <option value="ABUJA - MUNICIPAL CHAPTER">ABUJA - MUNICIPAL CHAPTER</option>
@@ -843,11 +848,11 @@
                                                       <option value="ZAMFARA STATE - ZAMFARA STATE CHAPTER">ZAMFARA STATE - ZAMFARA STATE CHAPTER</option>
 
 
-                                                         </select>
-                                                      <div *ngIf="form.get('chapter').touched && form.get('chapter').invalid"  class="invalid-feedback">
+                                                         </select> -->
+                                                      <!-- <div *ngIf="form.get('chapter').touched && form.get('chapter').invalid"  class="invalid-feedback">
                                                         <div *ngIf="form.get('chapter').errors.required">Chapter is required</div>
                                                      
-                                                      </div>
+                                                      </div> -->
                                </div>
                              
 
